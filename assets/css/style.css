@@ -72,7 +72,7 @@ h1.page-title {
   margin-bottom: 0rem;
 }
 
-
+/*  Flex box utilities */
 .row {
   display: flex;
   flex-direction: row;
@@ -120,6 +120,8 @@ h1.page-title {
   margin-bottom: 0em;
 }
 
+
+/* main */
 
 
 /* Footer */
