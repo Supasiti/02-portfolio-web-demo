@@ -1,0 +1,133 @@
+:root {
+  --teal: #73CCA8;
+  --light-grey: #525e65;
+  --light-grey-rgb: 82, 94, 101;
+  --light-green :#DBE8D4;
+  --dark-grey: #282a36;
+  --darker-grey: #222733;
+}
+
+html {
+  font-size: 100%;
+}
+
+/*  set everything to zero */
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: var(--darker-grey);
+}
+
+/* Font Styling */
+h1,
+h2,
+h3,
+p, a {
+  font-family: "open sans",sans-serif;
+  color: var(--teal);
+  line-height: 1.3;
+  margin-bottom: 0.2em;
+  padding: 0.25em 0.2em;
+
+}
+
+h1 {
+  font-family: "Josefin Sans",sans-serif ;
+  font-size: 2.4rem;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+p {
+  color: var(--light-green);
+  font-size: 1rem;
+}
+
+a {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Header */
+header {
+  /* gradient background */
+  background-image: linear-gradient(
+    to bottom,
+    var(--dark-grey),
+    var(--light-grey)
+  );
+  padding: 0rem 1rem;
+}
+
+h1.page-title {
+  text-transform: uppercase;
+  margin-bottom: 0rem;
+}
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  align-items: stretch;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+/* navigation bar */
+.nav-bar {
+  align-items: center;
+  margin-right: 3rem;
+}
+
+.nav-bar ul {
+  height: 100%;
+}
+
+.menu-item a {
+  padding: 0em 1em;
+  height: 100%;
+  margin-bottom: 0em;
+}
+
+.menu-item a p {
+  color: var(--teal);
+  font-size: 1.4rem;
+  margin-bottom: 0em;
+}
+
+
+
+/* Footer */
+footer {
+  background-color: var(--darker-grey);
+  padding: 1em;
+}
+
+footer p {
+  text-align: center;
+}
