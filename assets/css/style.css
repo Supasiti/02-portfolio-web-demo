@@ -54,12 +54,12 @@ p, a {
   font-family: Lato,sans-serif;
   color: var(--teal);
   letter-spacing: 1px;
-  line-height: 1.3;
+  line-height: 1.4;
   padding: 0.25em 0em;
 }
 
 h1 {
-  font-family: "Josefin Sans",sans-serif ;
+  font-family: Josefin Sans,sans-serif ;
   font-size: 6rem;
   font-weight: 100;
 }
@@ -83,6 +83,7 @@ p {
 }
 
 a {
+  color: var(--light-green);
   font-size: 1.2rem;
   cursor: pointer;
 }
@@ -97,6 +98,7 @@ header.page-header {
   );
   padding: 0rem 1rem;
   position: fixed;
+  z-index: 1000;
   top: 0px;
   left: 0px;
   right: 0px;
@@ -137,7 +139,14 @@ p.nav-title {
 
 
 /* anchor */
+.anchor {
+  position: relative;
+}
 
+.anchor a.anchor-tag {
+  position: absolute;
+  top: -3.4rem
+}
 
 /* navigation bar */
 .nav-bar {
@@ -150,16 +159,27 @@ p.nav-title {
 }
 
 .menu-item a {
-  padding: 0em 1em;
+  padding: 0em 0em 0em 1em;
+  margin: 0em 1em 0em 0em;
   height: 100%;
-  margin-bottom: 0em;
 }
 
 .menu-item a p {
-  color: var(--teal);
+  color: var(--light-green);
   font-size: 1.4rem;
   margin-bottom: 0em;
 }
+
+/* hover */
+.menu-item a:hover {
+  border-bottom: 2px solid var(--ny-pink);
+  border-left: 1px solid var(--teal);
+}
+
+.menu-item a:hover p {
+  color: var(--teal);
+}
+
 
 /* ------------------------------------- */
 /* main */
@@ -199,7 +219,7 @@ main {
 /* banner */
 .banner {
   text-align: center;
-  padding: 3rem 0rem;
+  padding: 6rem 0rem;
 }
 .banner h1 {
   text-transform: uppercase;
