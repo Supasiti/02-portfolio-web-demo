@@ -159,12 +159,21 @@ header.page-header {
 }
 
 p.nav-title {
+  /* gradient background */
+  background-image: linear-gradient(
+    to bottom,
+    var(--dark-grey),
+    var(--light-grey)
+  );
+  text-align: center;
   text-transform: uppercase;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-bottom: 0rem;
   font-size: 1.8rem ;
   color: var(--teal);
+  position: relative;
+  z-index: 1000;
 }
 
 /* ------------------------------------- */
@@ -221,6 +230,7 @@ p.nav-title {
   position: absolute;
   top: 0%;
   left: 0%;
+  z-index: 1001;
 }
 
 /* close menu */
@@ -236,7 +246,6 @@ p.nav-title {
 #close-menu:hover {
   color: var(--teal);
 }
-
 
 /* ------------------------------------- */
 /* main */
@@ -461,8 +470,7 @@ footer p {
   }
 
   p.nav-title {
-    order: 2;
-    margin: 0em auto;
+    width: 100%;
   }
 
   /* Navigation */
@@ -470,8 +478,14 @@ footer p {
     width: 100%;
     margin-right: 0em;
     flex-direction: column;
-    align-items: flex-end;  /* align all the items to right */ 
-    justify-content: center;
+    
+    /* to hide beneath the page title */
+    position: absolute;
+    z-index: 999;
+    top: -16rem; 
+    left: 0rem;
+    background-color: var(--light-grey);
+    transition: top 0.5s ease-in-out; /* change top to slide it down */
   }
 
   #main-menu-toggle {
@@ -479,21 +493,10 @@ footer p {
   }
 
   .nav-bar ul {
-    display: none;
-    position: absolute;
-    z-index: 1000;
-    top: 4.6rem;
-    left: 0rem;
-    background-color: var(--light-grey);
-    transition: all 1s ease-in;
-
-    /*  taking full width of the view port */
-    height: unset;
+    display: flex;
+    height: unset; /* Need to reset the height to fit the content */
     width: 100%;
-
-    /* change flex direction to column */
-    flex-direction: column;
-    align-items: flex-end;
+    flex-direction: column; /* need to change flex direction to column */
   }
 
   .menu-item {
@@ -503,6 +506,7 @@ footer p {
   }
 
   .menu-item::after {
+    /* adding separator */
     content: "";
     position: absolute;
     bottom: 0%;
@@ -522,10 +526,10 @@ footer p {
 
   /* interaction with hamberger icon */
   #main-menu:target {
-    display: flex;
+    top: 4.6rem; /* this will slide the menu down from under the page title */
   }
 
-  #main-menu:target .menu-item .close-menu{
+  #main-menu:target .close-menu{
     display: inline-block;
   }
 
