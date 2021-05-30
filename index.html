@@ -12,22 +12,22 @@
 <body>
   <!-- Header -->
   <header class="page-header">
-    <div class="row space-between">
+    <div class="flex-row space-between">
       <p class="nav-title">
         Tharatorn Supasiti
       </p>
 
       <!-- Navigation bar -->
       <nav class="nav-bar">
-        <ul class="row flex-end">
+        <ul class="flex-row">
           <li class="menu-item">
-            <a class="column flex-center" href="#about-me"><p>About Me</p></a> 
+            <a class="flex-column flex-center" href="#about-me"><p>About Me</p></a> 
           </li>
           <li class="menu-item">
-            <a class="column flex-center" href="#my-projects"><p>Projects</p></a>
+            <a class="flex-column flex-center" href="#my-projects"><p>Projects</p></a>
           </li>
           <li class="menu-item">
-            <a class="column flex-center" href="#contact-me"><p>Contact</p></a>
+            <a class="flex-column flex-center" href="#contact-me"><p>Contact</p></a>
           </li>
         </ul>
       </nav>
@@ -39,7 +39,7 @@
 
     <!-- banner -->
     <section class="main-container">
-      <div class="banner column center">
+      <div class="banner flex-column flex-center">
         <h3>Hi, my name is</h3>
         <h1>Tharatorn Supasiti.</h1>
         <h3>I'm a full-stack web developer.</h3>
@@ -49,12 +49,12 @@
     <!-- About me -->
     <section class="main-section anchor">
       <a class="anchor-tag" name="about-me"></a>
-      <div class="container row">
+      <div class="container padding-top-bottom flex-row">
         
-        <!-- side column -->
+        <!-- side flex-column -->
         <div class="side-container">
-          <div class="profile column"> 
-            <div class="img-container row">
+          <div class="profile flex-column"> 
+            <div class="img-border flex-row">
               <img src="" alt="My beautiful self">
             </div>
             <h3>Tharatorn Supasiti</h3>
@@ -63,23 +63,26 @@
           </div>
         </div>
 
-        <!-- main column -->
+        <!-- main flex-column -->
         <div class="main-container">
-          <article class="column center">
-            <h2>About Me</h2>
-            <p>Hi, my name is Thara. I am a mathematician by training, a rock climbing 
-              route setter by trade and a self-taught coder. I have a PhD in Pure Mathematics 
-              from the University of Melbourne.</p>
-            <p>I am mathematically-minded and enjoy the challenge of solving complex 
-              problems – with both the mind and body. This is what drew me to the study 
-              of pure mathematics in the first place, where I finished my PhD in Geometric 
-              Group Theory and Low-Dimensional Topology at the University of Melbourne in 
-              2015. Since then, I have been working as a route setter in the rock climbing 
-              industry, which is essentially just another application of problem-solving, 
-              but with the body. Two years ago, I started coding because I saw a lot of 
-              inefficiencies in the rock climbing industry and wanted to develop tools to 
-              solve some of these problems. I have not looked back since!</p>
-          </article>
+          <div class="content-wrapper">
+            <article class="flex-column flex-center">
+              <h2 class="right-title underline">About Me</h2>
+              <p>Hi, my name is Thara. I am a mathematician by training, a rock climbing 
+                route setter by trade and a self-taught coder. I have a PhD in Pure Mathematics 
+                from the University of Melbourne.</p>
+              <p>I am mathematically-minded and enjoy the challenge of solving complex 
+                problems – with both the mind and body. This is what drew me to the study 
+                of pure mathematics in the first place, where I finished my PhD in Geometric 
+                Group Theory and Low-Dimensional Topology at the University of Melbourne in 
+                2015. Since then, I have been working as a route setter in the rock climbing 
+                industry, which is essentially just another application of problem-solving, 
+                but with the body. Two years ago, I started coding because I saw a lot of 
+                inefficiencies in the rock climbing industry and wanted to develop tools to 
+                solve some of these problems. I have not looked back since!</p>
+            </article>
+          </div>
+          
         </div>
       </div>
     </section>
@@ -87,13 +90,13 @@
     <!-- projects -->
     <section class="main-section anchor">
       <a class="anchor-tag" name="my-projects"></a>
-      <div class="container row">
+      <div class="container padding-top-bottom flex-row">
 
-        <!-- Side column -->
+        <!-- Side flex-column -->
         <div class="side-container">
-          <div class="side-header column flex-end">
+          <div class="content-wrapper flex-column flex-end">
             <header>
-              <h2>Projects</h2>
+              <h2 class="left-title underline">Projects</h2>
             </header>
           </div>
         </div>
@@ -101,7 +104,7 @@
         <!-- main projects -->
         <div class="main-container">
           <div class="content-wrapper">
-            <ul class="row space-between">
+            <ul class="flex-row space-between">
               
               <!-- Project #1 -->
               <li id="first-project" class="card-container">
@@ -112,8 +115,10 @@
                   <div class="card-wrapper">
                     <!-- Todo : alt text-->
                     <img class="card-img" src="./assets/images/search-engine-optimization.jpg" alt=""/>  <!-- Todo : alt text-->
-                    <ul class="card-languages">
-                      <li class="card-language"> Python</li>
+                    <ul class="card-languages flex-row flex-start">
+                      <li class="card-language">Python</li>
+                      <li class="card-language">Html</li>
+                      <li class="card-language">CSS</li>
                     </ul>
                     <div class="card-img-overlay"></div>
                   </div>
@@ -197,13 +202,13 @@
     <!-- Contact -->
     <section class="main-section anchor">
       <a class="anchor-tag" name="contact-me"></a>
-      <div class="container row">
+      <div class="container padding-top-bottom flex-row">
         
-        <!-- Side column -->
+        <!-- Side flex-column -->
         <div class="side-container">
-          <div class="side-header column flex-end">
+          <div class="content-wrapper flex-column flex-end">
             <header>
-              <h2>Contact Me</h2>
+              <h2 class="left-title underline">Contact Me</h2>
             </header>
           </div>
         </div>
@@ -211,15 +216,15 @@
         <!-- main projects -->
         <div class="main-container">
           <div class="content-wrapper">
-            <ul class="padding-top-bottom row space-between">
+            <ul class="padding-top-bottom flex-row space-between">
               <li class="item-fit-wrapper underline">
-                <p class="contact-me">0455 555 555</p>
+                <p class="contact-me center-V">0455 555 555</p>
               </li>
               <li class="item-fit-wrapper underline">
-                <p class="contact-me">example@gmail.com</p>
+                <p class="contact-me center-V">example@gmail.com</p>
               </li>
               <li class="item-fit-wrapper underline">
-                <a class="contact-me" href="">Github </a>
+                <a class="contact-me center-V" href="">Github </a>
               </li>
             </ul>
           </div>
@@ -232,7 +237,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>&#169 Tharatorn Supasiti</p>
+    <p>&#169 2021 Tharatorn Supasiti</p>
   </footer>
 </body>
 </html>
