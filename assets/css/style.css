@@ -223,6 +223,20 @@ p.nav-title {
   left: 0%;
 }
 
+/* close menu */
+#close-menu {
+  display: none;
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 1em;
+  padding: .5em 0.5px;
+}
+
+#close-menu:hover {
+  color: var(--teal);
+}
+
 
 /* ------------------------------------- */
 /* main */
@@ -446,10 +460,6 @@ footer p {
     font-size: 80%;
   }
 
-  /* .page-header > .flexrow {
-
-  } */
-
   p.nav-title {
     order: 2;
     margin: 0em auto;
@@ -457,7 +467,7 @@ footer p {
 
   /* Navigation */
   .nav-bar {
-    order: 1;
+    width: 100%;
     margin-right: 0em;
     flex-direction: column;
     align-items: flex-end;  /* align all the items to right */ 
@@ -475,12 +485,11 @@ footer p {
     top: 4.6rem;
     left: 0rem;
     background-color: var(--light-grey);
-    transition: all 0.5s ease-in;
+    transition: all 1s ease-in;
 
     /*  taking full width of the view port */
     height: unset;
-    width: 100vw;
-
+    width: 100%;
 
     /* change flex direction to column */
     flex-direction: column;
@@ -503,22 +512,21 @@ footer p {
     z-index: 2;
   }
 
-  .menu-item a {
-    margin-right: 0.6em;
-  }
-
   .menu-item a:hover {
     border: none;
   }
 
   .menu-item a p {
-    text-align: right;
+    text-align: center;
   }
 
   /* interaction with hamberger icon */
   #main-menu:target {
     display: flex;
-    
+  }
+
+  #main-menu:target .menu-item .close-menu{
+    display: inline-block;
   }
 
   /*  Main body */
