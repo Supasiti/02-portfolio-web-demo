@@ -151,7 +151,6 @@ header.page-header {
     var(--dark-grey),
     var(--light-grey)
   );
-  padding: 0rem 1rem;
   position: fixed;
   z-index: 1000;
   top: 0px;
@@ -161,6 +160,8 @@ header.page-header {
 
 p.nav-title {
   text-transform: uppercase;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin-bottom: 0rem;
   font-size: 1.8rem ;
   color: var(--teal);
@@ -172,10 +173,12 @@ p.nav-title {
   align-items: center;
   margin-right: 3rem;
   margin-bottom: 0em;
+  position: relative;
 }
 
 .nav-bar ul {
   height: 100%;
+  width: max-content;
 }
 
 .menu-item a {
@@ -208,6 +211,18 @@ p.nav-title {
   position: absolute;
   top: -3.4rem
 }
+
+/*  hamburger */
+#main-menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  line-height: 1em;
+  padding: .75em 15px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
 
 /* ------------------------------------- */
 /* main */
@@ -423,13 +438,114 @@ footer p {
   html {
     font-size: 90%;
   }
-
-  
 }
 
 /* Mobile */
 @media screen and (max-width: 768px) {
   html {
     font-size: 80%;
+  }
+
+  /* .page-header > .flexrow {
+
+  } */
+
+  p.nav-title {
+    order: 2;
+    margin: 0em auto;
+  }
+
+  /* Navigation */
+  .nav-bar {
+    order: 1;
+    margin-right: 0em;
+    flex-direction: column;
+    align-items: flex-end;  /* align all the items to right */ 
+    justify-content: center;
+  }
+
+  #main-menu-toggle {
+    display: inline-block;
+  }
+
+  .nav-bar ul {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    top: 4.6rem;
+    left: 0rem;
+    background-color: var(--light-grey);
+    transition: all 0.5s ease-in;
+
+    /*  taking full width of the view port */
+    height: unset;
+    width: 100vw;
+
+
+    /* change flex direction to column */
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .menu-item {
+    width: 100%; 
+    padding: 0.6em 0em;
+    position: relative;
+  }
+
+  .menu-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    border-bottom: 2.8px solid var(--dark-grey);
+    z-index: 2;
+  }
+
+  .menu-item a {
+    margin-right: 0.6em;
+  }
+
+  .menu-item a:hover {
+    border: none;
+  }
+
+  .menu-item a p {
+    text-align: right;
+  }
+
+  /* interaction with hamberger icon */
+  #main-menu:target {
+    display: flex;
+    
+  }
+
+  /*  Main body */
+   h1 {
+    font-size: 4rem ;
+  }
+
+  .card-container {
+    flex: 0 0 100%;
+  }
+
+  .side-container {
+    flex: 0 0 100%;
+    border: none;
+  }
+
+  .side-container .content-wrapper {
+    align-items: flex-start;
+  }
+
+  .main-container {
+    flex: 0 0 100%;
+  }
+
+  .left-title {
+    padding-right: 0rem;
+    padding-left: 1rem;
+    left: -1rem;
   }
 }

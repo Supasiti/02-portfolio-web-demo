@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tharatorn Supasiti | Full-stack Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -13,13 +14,21 @@
   <!-- Header -->
   <header class="page-header">
     <div class="flex-row space-between">
+      <!-- hamburger icon -->
+      <a class="menu-toggle"
+        href="#main-menu" 
+        id="main-menu-toggle">
+        <span class="fa fa-bars"></span>
+      </a>
+
+      <!-- page title -->
       <p class="nav-title">
         Tharatorn Supasiti
       </p>
 
       <!-- Navigation bar -->
-      <nav class="nav-bar">
-        <ul class="flex-row">
+      <nav class="nav-bar flex-row">
+        <ul id="main-menu" class="flex-row">
           <li class="menu-item">
             <a class="flex-column flex-center" href="#about-me"><p>About Me</p></a> 
           </li>
@@ -110,7 +119,7 @@
               <li id="first-project" class="card-container">
                 <a href="" class="link-on-img">
                   <div class="card-title-wrapper">
-                      <h3 class="card-title">First Project</h3>
+                      <h3 class="card-title underline">First Project</h3>
                   </div>
                   <div class="card-wrapper">
                     <!-- Todo : alt text-->
@@ -129,7 +138,7 @@
               <li class="card-container">
                 <a href="" class="link-on-img">
                   <div class="card-title-wrapper">
-                      <h3 class="card-title">Second Project</h3>
+                      <h3 class="card-title underline">Second Project</h3>
                   </div>
                   <div class="card-wrapper">
                     <!-- Todo : alt text-->
@@ -146,7 +155,7 @@
               <li class="card-container">
                 <a href="" class="link-on-img">
                   <div class="card-title-wrapper">
-                      <h3 class="card-title">Third Project</h3>
+                      <h3 class="card-title underline">Third Project</h3>
                   </div>
                   <div class="card-wrapper">
                     <!-- Todo : alt text-->
@@ -163,7 +172,7 @@
               <li class="card-container">
                 <a href="" class="link-on-img">
                   <div class="card-title-wrapper">
-                      <h3 class="card-title">Fourth Project</h3>
+                      <h3 class="card-title underline">Fourth Project</h3>
                   </div>
                   <div class="card-wrapper">
                     <!-- Todo : alt text-->
@@ -180,7 +189,7 @@
               <li class="card-container">
                 <a href="" class="link-on-img">
                   <div class="card-title-wrapper">
-                      <h3 class="card-title">Fifth Project</h3>
+                      <h3 class="card-title underline">Fifth Project</h3>
                   </div>
                   <div class="card-wrapper">
                     <!-- Todo : alt text-->
@@ -229,8 +238,6 @@
             </ul>
           </div>
         </div>
-
-
       </div>
     </section>
   </main>
