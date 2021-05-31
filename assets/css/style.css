@@ -191,8 +191,8 @@ p.nav-title {
 }
 
 .menu-item a {
-  padding: 0em 0em 0em 1em;
-  margin: 0em 1em 0em 0em;
+  padding: 0em;
+  margin: 0em 1em;
   height: 100%;
 }
 
@@ -204,7 +204,6 @@ p.nav-title {
 /* hover */
 .menu-item a:hover {
   border-bottom: 2px solid var(--ny-pink);
-  border-left: 1px solid var(--teal);
 }
 
 .menu-item a:hover p {
