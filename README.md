@@ -67,17 +67,26 @@ The final webpage can be accessed through the following [link](https://supasiti.
 ## Design Consideration
 [(Back to top)](#task)
 
+To meet all the acceptance criteria above, the following design decisions were considered.
 
+### Responsive designs
+- Two breakpoints at 992px and 768px were added into css media queries in order to transition between different screen sizes. 
+- The font sizes were reduced between breakpoints to fit the screen better.
+- Significant redesign of the main navigation bar was needed when the screen size reduces below 768px.
+- A hamburger icon was added at the top left corner to allow a user to access the menu items.
+- This menu can be closed by clicking on the 'x' icon at the bottom of the menu item list.
+- To achieve ease of readibility, the overall layout of website was changed to a stack formation. This means the two-column layout in the portfolio section was reduced into one column.
 
+### CSS limitation
+When I tried to implement a hamberger icon interaction with menu items using only CSS and Html, I ended up with two choices:
+- in the first choice, the icon is an invisible checkbox with hamburger as an icon, where the menu item list's visibility depends on the state of the checkbox;
+- in the second, the icon is a `<a>` tag that is linked to a menu item list, which allowed me to use `:target` pseudo element selector.
 
-### Implementation
+Niether is a solution to an expect behaviour from a hamburger icon:
+- in the first solution, when a menu item is clicked, a user expects that the menu list would disappear. However, since the visibility of the menu list is tied to the state of the checkbox, this cannot happen; 
+- in the second solution, when the hamburger icon is clicked for the second time, one should expect the menu list to disappear. Since it is a `<a>` tag, it is simply direct you to the same the menu list again.
 
-To meet all the acceptance criteria above, the following refactoring and design principles were considered:
-- Appropriate semantic HTML elements were used to create more clarity in the code;
-- `style.css` was organised to follow semanture structure;
-- Comments were added, where appropriate to improve readability;
-- Duplicate styling were consolidated in order to reduce a future risk of editing errors;
-- Broken links were fixed;
-- An appropriate title was added;
-- The navigation bar was fixed to the top the page to improve the ease of navigation;
-- Accessible alt attributes were added to all images to improve user accessibility.
+This exposed a type of problem that CSS is not designed to solve. A modified second solution was instead implemented; a close menu list button was added to close the menu list. 
+
+### Separation of concerns
+ 
