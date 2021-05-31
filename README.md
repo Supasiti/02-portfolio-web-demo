@@ -95,3 +95,5 @@ For ease of maintenance, a `.html` file is largely concerned with holding the co
 - However, a more generalised CSS code requires the `.html` file to know more about its styling and layout (ie. adding more generic classes like 'center', 'underline', etc..).  
 - On the other hand, if each semantic element in the `.html` file get a unique CSS code, it will lead to multiple duplication in the `.css` file - far from ideal.
 - Therefore, a balance was struck between keeping the concerns of the two files seperated and minimising code duplication.
+
+[(Back to top)](#task)
