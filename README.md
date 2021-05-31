@@ -6,6 +6,7 @@ I was tasked to create a web application to showcase my portfolio of work. It ne
 - the developer's name, recent photo and their biograpy;
 - their work; and
 - how to contact them.
+
 Behaviorally, it needs to have easy accessible and functional navigational links that scroll
 to all of these sections. It needs to be responsive to changing viewport sizes. 
 
