@@ -37,6 +37,7 @@
 
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 /*  set everything to zero */
@@ -515,6 +516,10 @@ footer p {
     z-index: 2;
   }
 
+  .menu-item a {
+    margin: 0em;
+  }
+  
   .menu-item a:hover {
     border: none;
   }
