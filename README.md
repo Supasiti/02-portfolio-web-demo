@@ -86,7 +86,12 @@ Niether is a solution to an expect behaviour from a hamburger icon:
 - in the first solution, when a menu item is clicked, a user expects that the menu list would disappear. However, since the visibility of the menu list is tied to the state of the checkbox, this cannot happen; 
 - in the second solution, when the hamburger icon is clicked for the second time, one should expect the menu list to disappear. Since it is a `<a>` tag, it is simply direct you to the same the menu list again.
 
-This exposed a type of problem that CSS is not designed to solve. A modified second solution was instead implemented; a close menu list button was added to close the menu list. 
+This exposed a type of problem that CSS is not designed to solve. A modified second solution was instead implemented; a button was added into the menu list that can close it. 
 
 ### Separation of concerns
- 
+For ease of maintenance, a `.html` file is largely concerned with holding the content of the webpage, whereas `.css` files are tasked with styling the page. 
+- For consistent look of the webpage, I mostly followed 'Don't Repeat Yourself' principle.
+- It has an advantage of having fewer places to change the values and thus reduce a risk of forgetting to change a parameter somewhere in the code. 
+- However, a more generalised CSS code requires the `.html` file to know more about its styling and layout (ie. adding more generic classes like 'center', 'underline', etc..).  
+- On the other hand, if each semantic element in the `.html` file get a unique CSS code, it will lead to multiple duplication in the `.css` file - far from ideal.
+- Therefore, a balance was struck between keeping the concerns of the two files seperated and minimising code duplication.
