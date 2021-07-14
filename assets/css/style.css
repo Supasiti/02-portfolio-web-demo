@@ -308,6 +308,10 @@ main {
   margin-bottom: 1rem;
   overflow: hidden;
   transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 /* To stop blurring effect from spilling into the main area */

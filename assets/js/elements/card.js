@@ -17,15 +17,10 @@ const createCardTitle = (title) => {
   return result;
 };
 
-//  card body
-const createCardBody = (imgData) => {
-  const result = document.createElement('body');
-  const imgEl = document.createElement('img');
-  imgEl.classList = 'card-img';
-  imgEl.srcset = parseImgSource(imgData.source);
-  imgEl.alt = imgData.alt;
-
-  result.appendChild(imgEl);
+// card overlay
+const createCardDarkOverlay = () => {
+  const result = document.createElement('div');
+  result.classList = 'card-img-overlay';
   return result;
 };
 
@@ -40,6 +35,15 @@ const parseImgSource = (imgSource) => {
   return imgSrcSetStrings.join(', ');
 };
 
+// card image
+const createCardImgEl = (imgData) => {
+  const result = document.createElement('img');
+  result.classList = 'card-img';
+  result.srcset = parseImgSource(imgData.source);
+  result.alt = imgData.alt;
+  result.loop = -1;
+  return result;
+};
 
 // card tag
 const createCardTag = (tag) => {
@@ -59,31 +63,43 @@ const createCardTagContainer = (tags) => {
   return result;
 }
 
-
 // card footer
 const createCardFooter = (tags) => {
-  const result = document.createElement('footer');
+  const result = document.createElement('div');
   const cardTagContainerEl = createCardTagContainer(tags);
   result.appendChild(cardTagContainerEl);
   return result;
 };
 
 
+//  card body
+const createCardBody = (cardData) => {
+  const result = document.createElement('body');
+  const imgEl = createCardImgEl(cardData.imgData);
+  const footerEl = createCardFooter(cardData.tags);
+  const overlayEl = createCardDarkOverlay();
+
+  result.appendChild(imgEl);
+  result.appendChild(footerEl);
+  result.appendChild(overlayEl);
+  return result;
+};
 
 
-// composition
 
+// create final card
 const createCard = (cardData) => {
   const result = createCardContainer();
   const articleEl = document.createElement('article');
   const titleEl = createCardTitle(cardData.title);
-  const bodyEl  = createCardBody(cardData.imgData);
-  const footerEl = createCardFooter(cardData.tags);
+  const bodyEl  = createCardBody(cardData);
 
   articleEl.appendChild(titleEl);
   articleEl.appendChild(bodyEl);
-  articleEl.appendChild(footerEl);
-  
+
   result.appendChild(articleEl);
   return result;
 };
+
+
+//  todo add link
