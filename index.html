@@ -7,13 +7,23 @@
   <title>Tharatorn Supasiti | Full-stack Developer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
+  
+  <!-- bootstrap -->
+  <!-- <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous"> -->
+
+  <!-- my style -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/util-style.css">
 </head>
 
 <body>
   <!-- Header -->
   <header class="page-header">
-    <div class="flex-row space-between">
+    <div class="flex-row justify-space-between">
       <!-- hamburger icon -->
       <a class="menu-toggle"
         href="#main-menu" 
@@ -30,13 +40,13 @@
       <nav id="main-menu"  class="nav-bar flex-row">
         <ul class="flex-row">
           <li class="menu-item">
-            <a class="flex-column flex-center" href="#about-me"><p>About Me</p></a> 
+            <a class="flex-column justify-center" href="#about-me"><p>About Me</p></a> 
           </li>
           <li class="menu-item">
-            <a class="flex-column flex-center" href="#my-projects"><p>Projects</p></a>
+            <a class="flex-column justify-center" href="#my-projects"><p>Projects</p></a>
           </li>
           <li class="menu-item">
-            <a class="flex-column flex-center" href="#contact-me"><p>Contact</p></a>
+            <a class="flex-column justify-center" href="#contact-me"><p>Contact</p></a>
           </li>
           <li class="menu-item">
             <a href="#main-menu-toggle" 
@@ -55,7 +65,7 @@
 
     <!-- banner -->
     <section class="main-container">
-      <div class="banner flex-column flex-center">
+      <div class="banner flex-column justify-center">
         <h3>Hi, my name is</h3>
         <h1>Tharatorn Supasiti.</h1>
         <h3>I'm a full-stack web developer.</h3>
@@ -82,7 +92,7 @@
         <!-- main flex-column -->
         <div class="main-container">
           <div class="content-wrapper">
-            <article class="flex-column flex-center">
+            <article class="flex-column justify-center">
               <h2 class="right-title underline">About Me</h2>
               <p>Hi, my name is Thara. I am a mathematician by training, a rock climbing 
                 route setter by trade and a self-taught coder. I have a PhD in Pure Mathematics 
@@ -110,7 +120,7 @@
 
         <!-- Side flex-column -->
         <div class="side-container">
-          <div class="content-wrapper flex-column flex-end">
+          <div class="content-wrapper flex-column justify-end">
             <header>
               <h2 class="left-title underline">Projects</h2>
             </header>
@@ -120,7 +130,7 @@
         <!-- main projects -->
         <div class="main-container">
           <div class="content-wrapper">
-            <ul class="flex-row space-between">
+            <ul class="flex-row justify-space-between">
               
               <!-- Project #1 -->
               <li id="first-project" class="card-container">
@@ -251,7 +261,7 @@
         
         <!-- Side flex-column -->
         <div class="side-container">
-          <div class="content-wrapper flex-column flex-end">
+          <div class="content-wrapper flex-column justify-end">
             <header>
               <h2 class="left-title underline">Contact Me</h2>
             </header>
@@ -261,14 +271,14 @@
         <!-- main projects -->
         <div class="main-container">
           <div class="content-wrapper">
-            <ul class="padding-top-bottom flex-row space-between">
-              <li class="item-fit-wrapper underline">
+            <ul class="padding-top-bottom flex-row justify-space-between">
+              <li class="col-fit underline">
                 <p class="contact-me center-V">0455 555 555</p>
               </li>
-              <li class="item-fit-wrapper underline">
+              <li class="col-fit underline">
                 <p class="contact-me center-V">example@gmail.com</p>
               </li>
-              <li class="item-fit-wrapper underline">
+              <li class="col-fit underline">
                 <a class="contact-me center-V" href="">Github </a>
               </li>
             </ul>

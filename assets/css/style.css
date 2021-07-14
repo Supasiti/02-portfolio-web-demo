@@ -7,7 +7,7 @@
   --dark-grey: #2d333b;
   --darker-grey: #222733;
   --darker-grey-rgb: 34,39,51;
-
+  --border-radius: 4px;
 }
 /* ------------------------------------- */
 /*  Load Montserrat font */
@@ -95,53 +95,6 @@ a {
   cursor: pointer;
 }
 
-/* ------------------------------------- */
-/* Layout Utilities */
-
-.center-V {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.underline {
-  border-bottom: 4px solid var(--ny-pink);
-}
-
-.padding-top-bottom {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-/* ------------------------------------- */
-/*  Flex box utilities */
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: stretch;
-  align-items: stretch;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.space-between {
-  justify-content: space-between;
-}
-
-.flex-end {
-  justify-content: flex-end;
-}
-
-.flex-center {
-  justify-content: center;
-}
-
-.item-fit-wrapper {
-  flex: 0 0 0;
-}
 
 /* ------------------------------------- */
 /* Header */
