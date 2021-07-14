@@ -68,7 +68,7 @@
     <section class="col-12 main-container">
       <div class="banner flex-column justify-center">
         <h3>Hi, my name is</h3>
-        <h1>Tharatorn Supasiti.</h1>
+        <h1>Tharatorn Supasiti</h1>
         <h3>I'm a full-stack web developer.</h3>
       </div>
     </section>
@@ -80,7 +80,7 @@
         
         <!-- side column -->
         <div class="col-12 col-md-4 col-lg-3 side-container">
-          <div class="content-wrapper">
+          <div class="content">
             <div class="flex-column justify-flex-start align-center profile"> 
               <div class="img-border">
                 <img 
@@ -94,37 +94,41 @@
           </div>
         </div>
 
-        <!-- main flex-column -->
+        <!-- main column-->
         <div class="col-12 col-md-8 col-lg-9 main-container">
-          <div class="content-wrapper">
-            <article class="flex-column justify-center">
-              <h2 class="right-title underline">About Me</h2>
-              <p>Hi, my name is Thara. I am a mathematician by training, a rock climbing 
-                route setter by trade and a self-taught coder. I have a PhD in Pure Mathematics 
-                from the University of Melbourne.</p>
-              <p>I am mathematically-minded and enjoy the challenge of solving complex 
-                problems – with both the mind and body. This is what drew me to the study 
-                of pure mathematics in the first place, where I finished my PhD in Geometric 
-                Group Theory and Low-Dimensional Topology at the University of Melbourne in 
-                2015. Since then, I have been working as a route setter in the rock climbing 
-                industry, which is essentially just another application of problem-solving, 
-                but with the body. Two years ago, I started coding because I saw a lot of 
-                inefficiencies in the rock climbing industry and wanted to develop tools to 
-                solve some of these problems. I have not looked back since!</p>
+          <div class="content">
+            <article class="flex-row">
+              <header>
+                <h2 class="right-title underline">About Me</h2>
+              </header>
+              <body class="col-12">
+                <p>Hi, my name is Thara. I am a mathematician by training, a rock climbing 
+                  route setter by trade and a self-taught coder. I have a PhD in Pure Mathematics 
+                  from the University of Melbourne.</p>
+                <p>I am mathematically-minded and enjoy the challenge of solving complex 
+                  problems – with both the mind and body. This is what drew me to the study 
+                  of pure mathematics in the first place, where I finished my PhD in Geometric 
+                  Group Theory and Low-Dimensional Topology at the University of Melbourne in 
+                  2015. Since then, I have been working as a route setter in the rock climbing 
+                  industry, which is essentially just another application of problem-solving, 
+                  but with the body. Two years ago, I started coding because I saw a lot of 
+                  inefficiencies in the rock climbing industry and wanted to develop tools to 
+                  solve some of these problems. I have not looked back since!</p>
+              </body>
             </article>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- projects -->
+    <!-- Projects -->
     <section class="main-section anchor">
       <a class="anchor-tag" name="my-projects"></a>
       <div class="container py-5 flex-row">
 
         <!-- Side flex-column -->
         <div class="col-12 col-md-4 col-lg-3 side-container">
-          <div class="content-wrapper flex-column justify-flex-end">
+          <div class="content flex-row justify-flex-end">
             <header>
               <h2 class="left-title underline">Projects</h2>
             </header>
@@ -133,42 +137,51 @@
 
         <!-- main projects -->
         <div class="col-12 col-md-8 col-lg-9 main-container">
-          <div class="content-wrapper">
-            <ul class="flex-row justify-space-between">
-              
-              <!-- Project #1 -->
-              <li id="first-project" class="card-container">
-                <a href="" class="link-on-img">
-                  <div class="card-title-wrapper">
-                      <h3 class="card-title underline">First Project</h3>
-                  </div>
-                  <div class="card-wrapper">
-                    <!-- Todo : alt text-->
-                    <img class="card-img" 
-                      srcset="
-                        ./assets/images/search-engine-optimization-800w.jpeg 800w,
-                        ./assets/images/search-engine-optimization-400w.jpeg 400w
-                        "  
-                      src="./assets/images/search-engine-optimization-800w.jpeg" 
-                      alt="A notebook with seo written on its page"/>  
-                    <ul class="card-languages flex-row flex-start">
-                      <li class="card-language">Python</li>
-                      <li class="card-language">Html</li>
-                      <li class="card-language">CSS</li>
-                    </ul>
-                    <div class="card-img-overlay"></div>
-                  </div>
-                </a>
-              </li>
+          <div class="content">
+            
+            <!-- Project #1 -->
+            <div id="first-project-container" >
 
+              <!-- first project goes here -->
+              <div id="first-project" class="px-2">
+                <div class="card-container">
+                  <a href="" class="link-on-img">
+                    <div class="card-title-wrapper">
+                        <h3 class="card-title underline">First Project</h3>
+                    </div>
+                    <div class="card-wrapper">
+                      <img class="card-img" 
+                        srcset="
+                          ./assets/images/search-engine-optimization-800w.jpeg 800w,
+                          ./assets/images/search-engine-optimization-400w.jpeg 400w
+                          "  
+                        src="./assets/images/search-engine-optimization-800w.jpeg" 
+                        alt="A notebook with seo written on its page"/>  
+                      <ul class="card-languages flex-row flex-start">
+                        <li class="card-language">Python</li>
+                        <li class="card-language">Html</li>
+                        <li class="card-language">CSS</li>
+                      </ul>
+                      <div class="card-img-overlay"></div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- other projects -->
+            <div id="other-project-container">
+              <ul class="flex-row justify-space-between">
+              
+              
               <!-- Project #2 -->
-              <li class="card-container">
-                <a href="" class="link-on-img">
+              <li class="px-2 col-12 col-lg-6">
+                <div class="card-container">
+                  <a href="" class="link-on-img">
                   <div class="card-title-wrapper">
                       <h3 class="card-title underline">Second Project</h3>
                   </div>
                   <div class="card-wrapper">
-                    <!-- Todo : alt text-->
                     <img class="card-img" 
                       srcset="
                         ./assets/images/search-engine-optimization-800w.jpeg 800w,
@@ -182,77 +195,85 @@
                     <div class="card-img-overlay"></div>
                   </div>
                 </a>
+                </div>
+                
               </li>
 
               <!-- Project #3 -->
-              <li class="card-container">
-                <a href="" class="link-on-img">
-                  <div class="card-title-wrapper">
+              <li class="px-2 col-12 col-lg-6">
+                <div class="card-container">
+                  <a href="" class="link-on-img">
+                    <div class="card-title-wrapper">
                       <h3 class="card-title underline">Third Project</h3>
-                  </div>
-                  <div class="card-wrapper">
-                    <!-- Todo : alt text-->
-                    <img class="card-img" 
-                      srcset="
-                        ./assets/images/search-engine-optimization-800w.jpeg 800w,
-                        ./assets/images/search-engine-optimization-400w.jpeg 400w
-                        "  
-                      src="./assets/images/search-engine-optimization-800w.jpeg" 
-                      alt="A notebook with seo written on its page"/> 
-                    <ul class="card-languages">
-                      <li class="card-language"> Python</li>
-                    </ul>
-                    <div class="card-img-overlay"></div>
-                  </div>
-                </a>
+                    </div>
+                    <div class="card-wrapper">
+                      <img class="card-img" 
+                        srcset="
+                          ./assets/images/search-engine-optimization-800w.jpeg 800w,
+                          ./assets/images/search-engine-optimization-400w.jpeg 400w
+                          "  
+                        src="./assets/images/search-engine-optimization-800w.jpeg" 
+                        alt="A notebook with seo written on its page"/> 
+                      <ul class="card-languages">
+                        <li class="card-language"> Python</li>
+                      </ul>
+                      <div class="card-img-overlay"></div>
+                    </div>
+                  </a>
+                </div>
               </li>
 
               <!-- Project #4 -->
-              <li class="card-container">
-                <a href="" class="link-on-img">
-                  <div class="card-title-wrapper">
-                      <h3 class="card-title underline">Fourth Project</h3>
-                  </div>
-                  <div class="card-wrapper">
-                    <img class="card-img" 
-                      srcset="
-                        ./assets/images/search-engine-optimization-800w.jpeg 800w,
-                        ./assets/images/search-engine-optimization-400w.jpeg 400w
-                        "  
-                      src="./assets/images/search-engine-optimization-800w.jpeg" 
-                      alt="A notebook with seo written on its page"/>  
-                    <ul class="card-languages">
-                      <li class="card-language"> Python</li>
-                    </ul>
-                    <div class="card-img-overlay"></div>
-                  </div>
-                </a>
+              <li class="px-2 col-12 col-lg-6">
+                <div class="card-container">
+                  <a href="" class="link-on-img">
+                    <div class="card-title-wrapper">
+                        <h3 class="card-title underline">Fourth Project</h3>
+                    </div>
+                    <div class="card-wrapper">
+                      <img class="card-img" 
+                        srcset="
+                          ./assets/images/search-engine-optimization-800w.jpeg 800w,
+                          ./assets/images/search-engine-optimization-400w.jpeg 400w
+                          "  
+                        src="./assets/images/search-engine-optimization-800w.jpeg" 
+                        alt="A notebook with seo written on its page"/>  
+                      <ul class="card-languages">
+                        <li class="card-language"> Python</li>
+                      </ul>
+                      <div class="card-img-overlay"></div>
+                    </div>
+                  </a>
+                </div>
               </li>
             
               <!-- Project #5 -->
-              <li class="card-container">
-                <a href="" class="link-on-img">
-                  <div class="card-title-wrapper">
-                      <h3 class="card-title underline">Fifth Project</h3>
-                  </div>
-                  <div class="card-wrapper">
-                    <!-- Todo : alt text-->
-                    <img class="card-img" 
-                      srcset="
-                        ./assets/images/search-engine-optimization-800w.jpeg 800w,
-                        ./assets/images/search-engine-optimization-400w.jpeg 400w
-                        "  
-                      src="./assets/images/search-engine-optimization-800w.jpeg" 
-                      alt="A notebook with seo written on its page"/>  
-                    <ul class="card-languages">
-                      <li class="card-language"> Python</li>
-                    </ul>
-                    <div class="card-img-overlay"></div>
-                  </div>
-                </a>
+              <li class="px-2 col-12 col-lg-6">
+                <div class="card-container">
+                  <a href="" class="link-on-img">
+                    <div class="card-title-wrapper">
+                        <h3 class="card-title underline">Fifth Project</h3>
+                    </div>
+                    <div class="card-wrapper">
+                      <img class="card-img" 
+                        srcset="
+                          ./assets/images/search-engine-optimization-800w.jpeg 800w,
+                          ./assets/images/search-engine-optimization-400w.jpeg 400w
+                          "  
+                        src="./assets/images/search-engine-optimization-800w.jpeg" 
+                        alt="A notebook with seo written on its page"/>  
+                      <ul class="card-languages">
+                        <li class="card-language"> Python</li>
+                      </ul>
+                      <div class="card-img-overlay"></div>
+                    </div>
+                  </a>
+                </div>
               </li>
 
-            </ul>
+              </ul>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -265,7 +286,7 @@
         
         <!-- Side flex-column -->
         <div class="col-12 col-md-4 col-lg-3 side-container">
-          <div class="content-wrapper flex-column justify-flex-end">
+          <div class="content flex-row justify-flex-end">
             <header>
               <h2 class="left-title underline">Contact Me</h2>
             </header>
@@ -274,7 +295,7 @@
 
         <!-- main projects -->
         <div class="col-12 col-md-8 col-lg-9 main-container">
-          <div class="content-wrapper">
+          <div class="content">
             <ul class="py-5 flex-row justify-space-between">
               <li class="col-fit underline">
                 <p class="contact-me my-auto">0455 555 555</p>
