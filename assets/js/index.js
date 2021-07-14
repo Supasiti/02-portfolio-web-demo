@@ -14,7 +14,8 @@ const portfolioData = [
       'Javascript',
       'Bulma'
     ],
-    link : "https://lallender.github.io/Cryptfolio/"
+    link : "https://lallender.github.io/Cryptfolio/",
+    codeLink : "https://github.com/LAllender/Cryptfolio"
   },
   {
     title : "Weather Dashboard",
@@ -30,7 +31,8 @@ const portfolioData = [
       'CSS',
       'Javascript',
     ],
-    link : "https://supasiti.github.io/06-weather-dashboard/"
+    link : "https://supasiti.github.io/06-weather-dashboard/",
+    codeLink : "https://github.com/Supasiti/06-weather-dashboard"
   },
   {
     title : "Code Quiz",
@@ -46,7 +48,8 @@ const portfolioData = [
       'CSS',
       'Javascript',
     ],
-    link : "https://supasiti.github.io/04-code-quiz/"
+    link : "https://supasiti.github.io/04-code-quiz/",
+    codeLink : "https://github.com/Supasiti/04-code-quiz"
   }
 ];
 

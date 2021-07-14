@@ -310,8 +310,8 @@ main {
   transition: all 0.5s ease;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: flex-start;
 }
 
 /* To stop blurring effect from spilling into the main area */
@@ -334,7 +334,6 @@ main {
   left: -6px;
   z-index: 10;
 }
-
 .card .card-title {
   text-shadow: 0px 0px 4px var(--darker-grey);
   padding-left: 2rem;
@@ -344,10 +343,8 @@ main {
 .card .card-img {
   width: 100%;
 }
-
 .card .card-img-overlay {
   /* add darken overlay when hovered over */
-  position: relative;
   display: none;
   width: 100%;
   height: 100%;
@@ -355,6 +352,7 @@ main {
   top: 0%;
   background-color: rgba(var(--darker-grey-rgb), 0.4);
   z-index: 4;
+  cursor: pointer;
 }
 
 /* tags */
@@ -362,11 +360,18 @@ main {
   margin-top: 0.5rem;
   margin-bottom: -0.5rem;
 }
-
 .card .card-tag {
   margin-right: 1rem;
   text-shadow: 0px 0px 10px var(--teal);
 }
+.card .card-code {
+  position: relative;
+  z-index: 100;
+  margin-top: 1rem;
+  padding: 0px 1rem;
+  border: 1px solid var(--teal);
+  border-radius: var(--border-radius);
+};
 
 /* effect on hover */
 .card:hover {
@@ -374,15 +379,17 @@ main {
   box-shadow: 0px 0px 4px 4px var(--light-grey);
   transform: translate(-1px,-1px);
 }
-
 .card:hover .card-img{
   filter: blur(4px);
   -webkit-filter: blur(4px);
 }
-
 .card:hover .card-img-overlay{
   display: block;
 }
+.card .card-code:hover {
+  cursor: pointer;
+}
+
 
 /* ------------------------------------- */
 /* Contact me */

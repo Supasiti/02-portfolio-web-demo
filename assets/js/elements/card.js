@@ -1,10 +1,27 @@
 
+// handle go to a new window
+const handleGotoLink = (event, link) => {
+  event.preventDefault();
+  console.log(event.target);
+  window.open(link);
+};
+
+
 //  card container
 const createCardContainer = () => {
   const result = document.createElement('div');
   result.classList = 'card';
   return result;
 };
+
+// card aricle
+const createCardArticle = (link) => {
+  const result = document.createElement('article');
+  result.dataset.link = link;
+  result.addEventListener('click', event => handleGotoLink(event, link));
+  return result;
+};
+
 
 //  card title
 const createCardTitle = (title) => {
@@ -85,21 +102,32 @@ const createCardBody = (cardData) => {
   return result;
 };
 
-
+// card code
+const createCardCode = (codeLink) => {
+  const result = document.createElement('div');
+  const textEl = document.createElement('p');
+  textEl.innerHTML = '<span class="fab fa-github"></span> Code';
+  result.classList = 'card-code';
+  result.dataset.link = codeLink;
+  result.addEventListener('click', event => handleGotoLink(event, codeLink));
+  result.appendChild(textEl);
+  return result;
+};
 
 // create final card
-const createCard = (cardData) => {
+const createCard = (projectData) => {
   const result = createCardContainer();
-  const articleEl = document.createElement('article');
-  const titleEl = createCardTitle(cardData.title);
-  const bodyEl  = createCardBody(cardData);
+  const articleEl = createCardArticle(projectData.link)
+  const titleEl = createCardTitle(projectData.title);
+  const bodyEl  = createCardBody(projectData);
+  const codeEl  = createCardCode(projectData.codeLink);
 
   articleEl.appendChild(titleEl);
   articleEl.appendChild(bodyEl);
 
   result.appendChild(articleEl);
+  result.appendChild(codeEl);
+
   return result;
 };
 
-
-//  todo add link
