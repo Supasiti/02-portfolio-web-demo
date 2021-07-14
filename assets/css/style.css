@@ -59,7 +59,7 @@ p, a {
   color: var(--teal);
   letter-spacing: 1px;
   line-height: 1.4;
-  padding: 0.5em 0em;
+  padding: 0.4em 0em;
 }
 
 h1 {
@@ -71,24 +71,16 @@ h1 {
   padding: 0.2em 0em;
 }
 
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.6rem;
-}
-
-h4 {
+h2 { font-size: 2rem; }
+h3 { font-size: 1.6rem;}
+h4 { 
   color: var(--light-green);
   font-size: 1.4rem;
 }
-
 p {
   color: var(--light-green);
   font-size: 1.2rem;
 }
-
 a {
   color: var(--light-green);
   font-size: 1.2rem;
@@ -208,8 +200,9 @@ p.nav-title {
 
 /* ------------------------------------- */
 /* main */
+
+/* so it doesn't get hide behind the nav bar */
 main {
-  /* so it doesn't get hide behind the nav bar */
   margin-top: 4.43rem; 
 }
 
@@ -297,46 +290,35 @@ main {
 /* ------------------------------------- */
 /* portfolios section */
 
-.card-container {
+#first-project-container {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+#other-project-container {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.card {
   position: relative;
   border: 1px solid var(--light-grey);
   border-radius: var(--border-radius);
-  padding: 4px;
+  padding: 1rem;
   margin-bottom: 1rem;
-  flex: 0 0 50%;   /* take 50% of parent by default */
   overflow: hidden;
   transition: all 0.5s ease;
 }
 
-#first-project{
-  flex: 1 0 100%; /* the first project takes 100% of parent by default */
-}
-
-.card-wrapper {
-  /* To stop blurring effect from spilling into the main area */
-  position: relative;
+/* To stop blurring effect from spilling into the main area */
+.card > article {
   overflow: hidden;
 }
 
-.card-img {
-  width: 100%;
-}
-
-.card-img-overlay {
-  /* add darken overlay when hovered over */
-  position: relative;
-  display: none;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0%;
-  background-color: rgba(var(--darker-grey-rgb), 0.4);
-  z-index: 4;
-}
-
-.card-title-wrapper {
+/* card title */
+.card .card-title-container {
   padding: 0.6em 0.6em 0.6em 0em;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
 
   /* need dark background to improve contrast */
   background-color: rgba(var(--darker-grey-rgb), 0.75);
@@ -349,29 +331,52 @@ main {
   z-index: 10;
 }
 
-.card-title {
+.card .card-title {
   text-shadow: 0px 0px 4px var(--darker-grey);
-  padding-left: 1em ;
+  padding-left: 2rem;
 }
 
-.card-language {
-  margin-right: 1em;
+/* image */
+.card .card-img {
+  width: 100%;
+}
+
+.card .card-img-overlay {
+  /* add darken overlay when hovered over */
+  position: relative;
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  background-color: rgba(var(--darker-grey-rgb), 0.4);
+  z-index: 4;
+}
+
+/* tags */
+.card .card-tags {
+  margin-top: 0.5rem;
+  margin-bottom: -0.5rem;
+}
+
+.card .card-tag {
+  margin-right: 1rem;
   text-shadow: 0px 0px 10px var(--teal);
 }
 
 /* effect on hover */
-.card-container:hover {
+.card:hover {
   border: 1px solid var(--teal);
   box-shadow: 0px 0px 4px 4px var(--light-grey);
   transform: translate(-1px,-1px);
 }
 
-.card-container:hover .card-img{
+.card:hover .card-img{
   filter: blur(4px);
   -webkit-filter: blur(4px);
 }
 
-.card-container:hover .card-img-overlay{
+.card:hover .card-img-overlay{
   display: block;
 }
 
@@ -386,12 +391,12 @@ main {
 
 /* ------------------------------------- */
 /* Footer */
-footer {
+.page-footer {
   background-color: var(--darker-grey);
   padding: 1em;
 }
 
-footer p {
+.page-footer p {
   text-align: center;
 }
 
@@ -484,10 +489,6 @@ footer p {
   /*  Main body */
    h1 {
     font-size: 4rem ;
-  }
-
-  .card-container {
-    flex: 0 0 100%;
   }
 
   .side-container {
