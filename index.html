@@ -17,7 +17,8 @@
 
   <!-- my style -->
   <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/util-style.css">
+  <link rel="stylesheet" href="./assets/css/layout-style.css">
+  <link rel="stylesheet" href="./assets/css/spacing-style.css">
 </head>
 
 <body>
@@ -64,7 +65,7 @@
   <main>
 
     <!-- banner -->
-    <section class="main-container">
+    <section class="col-12 main-container">
       <div class="banner flex-column justify-center">
         <h3>Hi, my name is</h3>
         <h1>Tharatorn Supasiti.</h1>
@@ -75,22 +76,26 @@
     <!-- About me -->
     <section class="main-section anchor">
       <a class="anchor-tag" name="about-me"></a>
-      <div class="container padding-top-bottom flex-row">
+      <div class="container py-5 flex-row">
         
-        <!-- side flex-column -->
-        <div class="side-container">
-          <div class="profile flex-column"> 
-            <div class="img-border flex-row">
-              <img src="" alt="My beautiful self">
+        <!-- side column -->
+        <div class="col-12 col-md-4 col-lg-3 side-container">
+          <div class="content-wrapper">
+            <div class="flex-column justify-flex-start align-center profile"> 
+              <div class="img-border">
+                <img 
+                  src="./assets/images/me_400w.jpeg" 
+                  alt="My profile photo">
+              </div>
+              <h3>Tharatorn Supasiti</h3>
+              <h4>PhD in Pure Mathematics</h4>
+              <p>The University of Melbourne</p>
             </div>
-            <h3>Tharatorn Supasiti</h3>
-            <h4>PhD in Pure Mathematics</h4>
-            <p>The University of Melbourne</p>
           </div>
         </div>
 
         <!-- main flex-column -->
-        <div class="main-container">
+        <div class="col-12 col-md-8 col-lg-9 main-container">
           <div class="content-wrapper">
             <article class="flex-column justify-center">
               <h2 class="right-title underline">About Me</h2>
@@ -108,7 +113,6 @@
                 solve some of these problems. I have not looked back since!</p>
             </article>
           </div>
-          
         </div>
       </div>
     </section>
@@ -116,11 +120,11 @@
     <!-- projects -->
     <section class="main-section anchor">
       <a class="anchor-tag" name="my-projects"></a>
-      <div class="container padding-top-bottom flex-row">
+      <div class="container py-5 flex-row">
 
         <!-- Side flex-column -->
-        <div class="side-container">
-          <div class="content-wrapper flex-column justify-end">
+        <div class="col-12 col-md-4 col-lg-3 side-container">
+          <div class="content-wrapper flex-column justify-flex-end">
             <header>
               <h2 class="left-title underline">Projects</h2>
             </header>
@@ -128,7 +132,7 @@
         </div>
 
         <!-- main projects -->
-        <div class="main-container">
+        <div class="col-12 col-md-8 col-lg-9 main-container">
           <div class="content-wrapper">
             <ul class="flex-row justify-space-between">
               
@@ -257,11 +261,11 @@
     <!-- Contact -->
     <section class="main-section anchor">
       <a class="anchor-tag" name="contact-me"></a>
-      <div class="container padding-top-bottom flex-row">
+      <div class="container py-5 flex-row">
         
         <!-- Side flex-column -->
-        <div class="side-container">
-          <div class="content-wrapper flex-column justify-end">
+        <div class="col-12 col-md-4 col-lg-3 side-container">
+          <div class="content-wrapper flex-column justify-flex-end">
             <header>
               <h2 class="left-title underline">Contact Me</h2>
             </header>
@@ -269,17 +273,17 @@
         </div>
 
         <!-- main projects -->
-        <div class="main-container">
+        <div class="col-12 col-md-8 col-lg-9 main-container">
           <div class="content-wrapper">
-            <ul class="padding-top-bottom flex-row justify-space-between">
+            <ul class="py-5 flex-row justify-space-between">
               <li class="col-fit underline">
-                <p class="contact-me center-V">0455 555 555</p>
+                <p class="contact-me my-auto">0455 555 555</p>
               </li>
               <li class="col-fit underline">
-                <p class="contact-me center-V">example@gmail.com</p>
+                <p class="contact-me my-auto">example@gmail.com</p>
               </li>
               <li class="col-fit underline">
-                <a class="contact-me center-V" href="">Github </a>
+                <a class="contact-me my-auto" href="">Github </a>
               </li>
             </ul>
           </div>
