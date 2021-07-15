@@ -62,8 +62,9 @@ p, a {
 
 h1 {
   font-family: Josefin Sans,sans-serif ;
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 100;
+  line-height: 1.4;
   text-transform: uppercase;
   color: var(--ny-pink);
   padding: 0.2em 0em;
@@ -112,14 +113,13 @@ header.page-header {
   top: 0px;
   left: 0px;
   right: 0px;
+  height: 56px;
+  transition: left 0.5s ease-in-out;
 }
 
 p.page-title {
-  position: absolute;
-  top: 0;
-  z-index: 1001;
   width: 100%;
-  font-size: 1.8rem ;
+  font-size: 1.4rem ;
   color: var(--teal);
   text-align: center;
   text-transform: uppercase;
@@ -132,7 +132,7 @@ p.page-title {
   width: 0px;
   background-color: var(--light-grey);
   position: fixed;
-  z-index: 10;
+  z-index: 20;
   top: 0px;
   left: 0px;
   overflow: hidden;
@@ -160,7 +160,8 @@ p.page-title {
   display: none;
 }
 #open-menu-sm {
-  position: relative;
+  position: absolute;
+  top: 0px;
   z-index: 1010;
 }
 .menu-items {
@@ -196,8 +197,14 @@ p.page-title {
 
 /* so it doesn't get hide behind the nav bar */
 main {
-  margin-top: -56px; 
+  background-color: var(--darker-grey);
+  position: relative;
+  z-index: 10;
+  margin-top: 56px; 
+  margin-left: 0px;
+  transition: margin-left 0.5s ease-in-out;
 }
+
 /* dark background on every even section */
 .main-section:nth-child(even) {
   background-color: var(--dark-grey);
@@ -385,90 +392,45 @@ main {
 /* ------------------------------------- */
 /* Media queries */
 
-/* desktop */
-@media screen and (min-width: 992px) {
-  html {
-    font-size: 80%;
-  }
-}
 
-/* Mobile */
+/* Tablet */
 @media screen and (min-width: 768px) {
   html {
     font-size: 80%;
   }
 
-  p.nav-title {
-    width: 100%;
+  /*  leaving room for menu icon */
+  header.page-header {
+    left: 56px;
+  }
+  main {
+    margin-left: 56px;
   }
 
-  /* Navigation */
+  /* ----------------------- */
+  /*    menu   */
+
   .nav-bar {
-    /* width: 200px;
-    min-height: 100vh;
-    flex-direction: column;
-    position: absolute;
-    z-index: 2000;
-    top: -16rem; 
-    left: 0rem;
-    background-color: var(--light-grey);
-    transition: top 0.5s ease-in-out;  */
+    width: 240px;
+    z-index: 1;
+  }
+  #open-menu-sm {
+    display: none;
   } 
-
-  #main-menu-toggle {
-    /* display: inline-block; */
+  #open-menu-lg {
+    display: inline-flex;
+  } 
+  #close-menu-sm {
+    display: none;
   }
-
-  .nav-bar ul {
-    /* display: flex;
-    height: unset; 
-    width: 100%;
-    flex-direction: column;  */
+  .menu-icon-sm {
+    height: 48px;
   }
-
-  .menu-item {
-    /* width: 100%; 
-    padding: 0.6em 0em;
-    position: relative; */
-  }
-
-  .menu-item::after {
-    /* adding separator */
-    /* content: "";
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
-    width: 100%;
-    border-bottom: 2.8px solid var(--dark-grey);
-    z-index: 2; */
-  }
-
-  .menu-item a {
-    /* margin: 0em; */
-  }
-  
-  .menu-item a:hover {
-    /* border: none; */
-  }
-
-  .menu-item a p {
-    /* text-align: center; */
-  }
-
-  /* interaction with hamberger icon */
-  #main-menu:target {
-    /* top: 4.6rem;  */
-  }
-
-  #main-menu:target .close-menu{
-    /* display: inline-block; */
-  }
-
 
   /*  ----------------------- */
   /*  Main body */
    h1 {
-    font-size: 4rem ;
+    font-size: 6rem ;
   }
 
   .side-container {
@@ -485,3 +447,10 @@ main {
   }
 }
 
+/* ----------------------- */
+/*   desktop   */
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 90%;
+  }
+}
