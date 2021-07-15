@@ -7,11 +7,7 @@
   <title>Tharatorn Supasiti | Full-stack Developer</title>
 
   <!-- font awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css
-
-
-
-  ">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   
   <!--  styles -->
   <link rel="stylesheet" href="./assets/css/reset.css">
@@ -81,7 +77,7 @@
       <div class="container py-5 flex-row">
         
         <!-- side column -->
-        <div class="col-12 col-md-4 col-lg-3 side-container">
+        <aside class="col-12 col-md-4 col-lg-3 side-container">
           <div class="content">
             <div class="flex-column justify-flex-start align-center profile"> 
               <div class="img-border">
@@ -92,33 +88,53 @@
               <h3>Tharatorn Supasiti</h3>
               <h4>PhD in Pure Mathematics</h4>
               <p>The University of Melbourne</p>
+              <ul class="flex-row justify-space-between network-icon" aria-hidden="true">
+                <li>
+                  <a href="mailto:tharatorn.supasiti@gmail.com">
+                    <i class="fas fa-envelope fa-2x"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/supasiti" target="_blank" rel="noopener">
+                    <i class="fab fa-github fa-2x"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/tharatorn-supasiti-23240575/" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="./assets/files/CV-2021-06-19.pdf">
+                    <i class="fas fa-file fa-2x"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
+        </aside>
 
         <!-- main column-->
-        <div class="col-12 col-md-8 col-lg-9 main-container">
-          <div class="content">
-            <article class="flex-row">
-              <header>
-                <h2 class="right-title underline">About Me</h2>
-              </header>
-              <body class="col-12">
-                <p>Hi, my name is Thara. I am a mathematician by training, a rock climbing 
-                  route setter by trade and a self-taught coder. I have a PhD in Pure Mathematics 
-                  from the University of Melbourne.</p>
-                <p>I am mathematically-minded and enjoy the challenge of solving complex 
-                  problems – with both the mind and body. This is what drew me to the study 
-                  of pure mathematics in the first place, where I finished my PhD in Geometric 
-                  Group Theory and Low-Dimensional Topology at the University of Melbourne in 
-                  2015. Since then, I have been working as a route setter in the rock climbing 
-                  industry, which is essentially just another application of problem-solving, 
-                  but with the body. Two years ago, I started coding because I saw a lot of 
-                  inefficiencies in the rock climbing industry and wanted to develop tools to 
-                  solve some of these problems. I have not looked back since!</p>
-              </body>
-            </article>
-          </div>
+        <div class="col-12 col-md-8 col-lg-9">
+          <article class="flex-row">
+            <header>
+              <h2 class="right-title underline">About Me</h2>
+            </header>
+            <div class="content">
+              <p>Hi, my name is Thara. I am a mathematician by training, a rock climbing 
+                route setter by trade and a self-taught coder. I have a PhD in Pure Mathematics 
+                from the University of Melbourne.</p>
+              <p>I am mathematically-minded and enjoy the challenge of solving complex 
+                problems – with both the mind and body. This is what drew me to the study 
+                of pure mathematics in the first place, where I finished my PhD in Geometric 
+                Group Theory and Low-Dimensional Topology at the University of Melbourne in 
+                2015. Since then, I have been working as a route setter in the rock climbing 
+                industry, which is essentially just another application of problem-solving, 
+                but with the body. Two years ago, I started coding because I saw a lot of 
+                inefficiencies in the rock climbing industry and wanted to develop tools to 
+                solve some of these problems. I have not looked back since!</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -129,46 +145,39 @@
       <div class="container py-5 flex-row">
 
         <!-- Side flex-column -->
-        <div class="col-12 col-md-4 col-lg-3 side-container">
-          <div class="content flex-row justify-flex-end">
-            <header>
-              <h2 class="left-title underline">Projects</h2>
-            </header>
-          </div>
-        </div>
+        <aside class="col-12 col-md-4 col-lg-3 side-container">
+          <header class="flex-row justify-flex-end">
+            <h2 class="left-title underline">Projects</h2>
+          </header>
+        </aside>
 
         <!-- main projects -->
-        <div class="col-12 col-md-8 col-lg-9">
-          <div class="content">
-            <div id="first-project-container" >
-              <!-- pull the first project here -->
-            </div>
+        <div class="col-12 col-md-8 col-lg-9 px-4">
+          <div id="first-project-container" >
+            <!-- pull the first project here -->
+          </div>
 
-            <div id="other-project-container">
-              <!-- pull the other projects here -->
-            </div>
-            
+          <div id="other-project-container">
+            <!-- pull the other projects here -->
           </div>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section class="main-section anchor">
+    <!-- <section class="main-section anchor">
       <a class="anchor-tag" name="contact-me"></a>
-      <div class="container py-5 flex-row">
+      <div class="container py-5 flex-row"> -->
         
         <!-- Side flex-column -->
-        <div class="col-12 col-md-4 col-lg-3 side-container">
-          <div class="content flex-row justify-flex-end">
-            <header>
-              <h2 class="left-title underline">Contact Me</h2>
-            </header>
-          </div>
-        </div>
+        <!-- <aside class="col-12 col-md-4 col-lg-3 side-container">
+          <header class="flex-row justify-flex-end">
+            <h2 class="left-title underline">Contact Me</h2>
+          </header>
+        </aside> -->
 
         <!-- main projects -->
-        <div class="col-12 col-md-8 col-lg-9">
+        <!-- <div class="col-12 col-md-8 col-lg-9">
           <div class="content">
             <ul class="py-5 flex-row justify-space-between">
               <li class="col-fit underline">
@@ -184,7 +193,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
 
   <!-- Footer -->
