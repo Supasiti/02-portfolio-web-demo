@@ -115,18 +115,6 @@ header.page-header {
 }
 
 p.page-title {
-  /* gradient background */
-  /* background-image: linear-gradient(
-    to bottom,
-    var(--dark-grey),
-    var(--light-grey)
-  ); */
-  /* text-align: center;
-  text-transform: uppercase;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-bottom: 0rem; */
-  /* display: inline-block; */
   position: absolute;
   top: 0;
   z-index: 1001;
@@ -135,8 +123,6 @@ p.page-title {
   color: var(--teal);
   text-align: center;
   text-transform: uppercase;
-  /* position: relative;
-  z-index: 1000; */
 }
 
 /* ------------------------------------- */
@@ -224,9 +210,6 @@ main {
 .container {
   max-width: 1200px;
   margin: 0px auto;  /* centering horizontally */
-}
-.side-container {
-  border-right: 1px solid var(--teal);
 }
 .content {
   width: 100%;
@@ -402,17 +385,17 @@ main {
 /* ------------------------------------- */
 /* Media queries */
 
-/* Pads */
-@media screen and (max-width: 992px) {
+/* desktop */
+@media screen and (min-width: 992px) {
   html {
     font-size: 80%;
   }
 }
 
 /* Mobile */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   html {
-    font-size: 75%;
+    font-size: 80%;
   }
 
   p.nav-title {
@@ -421,66 +404,64 @@ main {
 
   /* Navigation */
   .nav-bar {
-    width: 200px;
+    /* width: 200px;
     min-height: 100vh;
     flex-direction: column;
-    
-    /* to hide beneath the page title */
     position: absolute;
     z-index: 2000;
     top: -16rem; 
     left: 0rem;
     background-color: var(--light-grey);
-    transition: top 0.5s ease-in-out; /* change top to slide it down */
-  }
+    transition: top 0.5s ease-in-out;  */
+  } 
 
   #main-menu-toggle {
-    display: inline-block;
+    /* display: inline-block; */
   }
 
   .nav-bar ul {
-    display: flex;
-    height: unset; /* Need to reset the height to fit the content */
+    /* display: flex;
+    height: unset; 
     width: 100%;
-    flex-direction: column; /* need to change flex direction to column */
+    flex-direction: column;  */
   }
 
   .menu-item {
-    width: 100%; 
+    /* width: 100%; 
     padding: 0.6em 0em;
-    position: relative;
+    position: relative; */
   }
 
   .menu-item::after {
     /* adding separator */
-    content: "";
+    /* content: "";
     position: absolute;
     bottom: 0%;
     left: 0%;
     width: 100%;
     border-bottom: 2.8px solid var(--dark-grey);
-    z-index: 2;
+    z-index: 2; */
   }
 
   .menu-item a {
-    margin: 0em;
+    /* margin: 0em; */
   }
   
   .menu-item a:hover {
-    border: none;
+    /* border: none; */
   }
 
   .menu-item a p {
-    text-align: center;
+    /* text-align: center; */
   }
 
   /* interaction with hamberger icon */
   #main-menu:target {
-    top: 4.6rem; /* this will slide the menu down from under the page title */
+    /* top: 4.6rem;  */
   }
 
   #main-menu:target .close-menu{
-    display: inline-block;
+    /* display: inline-block; */
   }
 
 
@@ -491,7 +472,7 @@ main {
   }
 
   .side-container {
-    border: none;
+    border-right: 1px solid var(--teal);
   }
 
   .side-container header {
