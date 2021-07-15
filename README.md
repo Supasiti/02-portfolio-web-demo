@@ -55,13 +55,13 @@ The end product should resemble the mock-up provided below:
 To use this project, first clone the repo on your device using the commands below:
 
     git init
-    git clone https://github.com/Supasiti/02-portfolio-web-demo.git
+    git clone https://github.com/Supasiti/portfolio.git
 
 
 ## Usage
 [(Back to top)](#task)
 
-The final webpage can be accessed through the following [link](https://supasiti.github.io/02-portfolio-web-demo/).
+The final webpage can be accessed through the following [link](https://supasiti.github.io/portfolio/).
 
 
 ## Design Consideration
