@@ -387,15 +387,6 @@ main {
 
 
 /* ------------------------------------- */
-/* Contact me */
-
-.contact-me {
-  white-space: nowrap;
-  font-size: 1.4rem;
-  padding: 0em 0em;
-}
-
-/* ------------------------------------- */
 /* Footer */
 .page-footer {
   background-color: var(--darker-grey);
