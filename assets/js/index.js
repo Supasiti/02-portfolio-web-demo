@@ -53,6 +53,25 @@ const portfolioData = [
   }
 ];
 
+const connectCloseMenuSm = () => {
+  const closeMenuEl = document.querySelector('#close-menu-sm');
+  const navBarEl = document.querySelector('#main-menu');
+  closeMenuEl.addEventListener('click', event => {
+    navBarEl.style.width ='0px';
+  });
+};
+
+const connectHamburgerSm = () => {
+  const hamburgerSmEl = document.querySelector('#open-menu-sm');
+  const navBarEl = document.querySelector('#main-menu');
+  hamburgerSmEl.addEventListener('click', event => {
+    event.preventDefault();
+    navBarEl.style.width ='240px';
+    connectCloseMenuSm();
+  });
+};
+
 
 
 displayPortfolio(portfolioData);
+connectHamburgerSm();

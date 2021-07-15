@@ -39,8 +39,6 @@ html {
   font-size: 75%;
   scroll-behavior: smooth;
 }
-
-/*  set everything to zero */
 body {
   margin: 0px;
   padding: 0px;
@@ -95,6 +93,9 @@ a {
 .bg-pink {
   background-color: var(--ny-pink);
 }
+.display-inline-block {
+  display: inline-block;
+}
 
 /* ------------------------------------- */
 /* Header */
@@ -106,7 +107,6 @@ header.page-header {
     var(--dark-grey),
     var(--light-grey)
   );
-  display: none;
   position: fixed;
   z-index: 1000;
   top: 0px;
@@ -114,112 +114,101 @@ header.page-header {
   right: 0px;
 }
 
-p.nav-title {
+p.page-title {
   /* gradient background */
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to bottom,
     var(--dark-grey),
     var(--light-grey)
-  );
-  text-align: center;
+  ); */
+  /* text-align: center;
   text-transform: uppercase;
   padding-left: 1rem;
   padding-right: 1rem;
-  margin-bottom: 0rem;
+  margin-bottom: 0rem; */
+  /* display: inline-block; */
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%;
   font-size: 1.8rem ;
   color: var(--teal);
-  position: relative;
-  z-index: 1000;
+  text-align: center;
+  text-transform: uppercase;
+  /* position: relative;
+  z-index: 1000; */
 }
 
 /* ------------------------------------- */
 /* navigation bar */
 .nav-bar {
   min-height: 100vh;
-  width: 240px;
+  width: 0px;
   background-color: var(--light-grey);
+  position: fixed;
+  z-index: 1010;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  transition: width 0.5s ease-in-out;
 }
 .menu-icon {
-  display: inline-block;
   color: var(--light-green);
   width: 56px;
   height: 56px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 .menu-icon-sm {
-  display: inline-block;
   color: var(--light-green);
   width: 56px;
-  height: 42px;
-  display: flex;
+  height: 40px;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 
 /*  hamburger */
-#open-menu-sm{
+#open-menu-lg{
   display: none;
 }
+#open-menu-sm {
+  position: relative;
+  z-index: 100;
+}
 .menu-item {
-  width: 100%;
-
+  width: 240px;
 }
 .menu-item p {
   display: inline;
   color: var(--light-green);
-  font-size: 1.4rem;
   line-height: 1;
   padding: 0px;
 }
 
-
-
 /* hover */
-/* .menu-item a:hover {
-  border-bottom: 2px solid var(--ny-pink);
-}
-
-.menu-item a:hover p {
+.menu-item:hover *, .menu-icon:hover, .menu-icon-sm:hover {
   color: var(--teal);
-} */
+  cursor: pointer;
+} 
 
 /* anchor */
 .anchor {
   position: relative;
 }
-
 .anchor a.anchor-tag {
   position: absolute;
-  top: -3.4rem
+  top: -56px;
 }
-
-
-
-
-/* close menu */
-#close-menu {
-  /* display: none; */
-  /* width: 100%; */
-  /* text-align: center;
-  font-size: 1.8rem;
-  line-height: 1em;
-  padding: .5em 0.5px; */
-}
-
-/* #close-menu:hover {
-  color: var(--teal);
-} */
 
 /* ------------------------------------- */
 /* main */
 
 /* so it doesn't get hide behind the nav bar */
 main {
-  margin-top: 4.43rem; 
+  margin-top: -56px; 
 }
-
 /* dark background on every even section */
 .main-section:nth-child(even) {
   background-color: var(--dark-grey);
@@ -229,16 +218,13 @@ main {
 .main-section:nth-child(odd) {
   background-color: var(--darker-grey);
 }
-
 .container {
   max-width: 1200px;
   margin: 0px auto;  /* centering horizontally */
 }
-
 .side-container {
   border-right: 1px solid var(--teal);
 }
-
 .content {
   width: 100%;
   padding: 0rem 1.5rem;
@@ -307,7 +293,6 @@ main {
 
 /* ------------------------------------- */
 /* portfolios section */
-
 
 .card {
   position: relative;
