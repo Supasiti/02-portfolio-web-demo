@@ -103,6 +103,7 @@ header.page-header {
     var(--dark-grey),
     var(--light-grey)
   );
+  display: none;
   position: fixed;
   z-index: 1000;
   top: 0px;
@@ -131,36 +132,58 @@ p.nav-title {
 /* ------------------------------------- */
 /* navigation bar */
 .nav-bar {
+  min-height: 100vh;
+  width: 240px;
+  background-color: var(--light-grey);
+}
+.menu-icon {
+  display: inline-block;
+  color: var(--light-green);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin-right: 3rem;
-  margin-bottom: 0em;
-  position: relative;
+}
+.menu-icon-sm {
+  display: inline-block;
+  color: var(--light-green);
+  width: 56px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.nav-bar ul {
-  height: 100%;
-  width: max-content;
+/*  hamburger */
+#open-menu-sm{
+  display: none;
 }
+.menu-items {
 
-.menu-item a {
-  padding: 0em;
-  margin: 0em 1em;
-  height: 100%;
 }
-
-.menu-item a p {
+.menu-item {
+  width: 100%;
+  height: 48px;
+}
+.menu-item p {
+  display: inline;
   color: var(--light-green);
   font-size: 1.4rem;
+  line-height: 1;
+  padding: 0px;
 }
 
+
+
 /* hover */
-.menu-item a:hover {
+/* .menu-item a:hover {
   border-bottom: 2px solid var(--ny-pink);
 }
 
 .menu-item a:hover p {
   color: var(--teal);
-}
+} */
 
 /* anchor */
 .anchor {
@@ -172,31 +195,22 @@ p.nav-title {
   top: -3.4rem
 }
 
-/*  hamburger */
-#main-menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  line-height: 1em;
-  padding: .75em 15px;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  z-index: 1001;
-}
+
+
 
 /* close menu */
 #close-menu {
-  display: none;
-  width: 100%;
-  text-align: center;
+  /* display: none; */
+  /* width: 100%; */
+  /* text-align: center;
   font-size: 1.8rem;
   line-height: 1em;
-  padding: .5em 0.5px;
+  padding: .5em 0.5px; */
 }
 
-#close-menu:hover {
+/* #close-menu:hover {
   color: var(--teal);
-}
+} */
 
 /* ------------------------------------- */
 /* main */
@@ -419,13 +433,13 @@ main {
 
   /* Navigation */
   .nav-bar {
-    width: 100%;
-    margin-right: 0em;
+    width: 200px;
+    min-height: 100vh;
     flex-direction: column;
     
     /* to hide beneath the page title */
     position: absolute;
-    z-index: 999;
+    z-index: 2000;
     top: -16rem; 
     left: 0rem;
     background-color: var(--light-grey);
