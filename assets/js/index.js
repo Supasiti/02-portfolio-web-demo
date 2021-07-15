@@ -53,25 +53,34 @@ const portfolioData = [
   }
 ];
 
-const connectCloseMenuSm = () => {
-  const closeMenuEl = document.querySelector('#close-menu-sm');
-  const navBarEl = document.querySelector('#main-menu');
-  closeMenuEl.addEventListener('click', event => {
-    navBarEl.style.width ='0px';
+
+const connectOpenMenuSm = () => {
+  document.addEventListener('click', event => {
+    // event.preventDefault();
+    const navBarEl = document.querySelector('#main-menu');
+    const divEl = event.target.closest('div');
+    if (divEl && divEl.id === 'open-menu-sm'){
+      navBarEl.style.width ='240px';
+      navBarEl.style.zIndex = 1020;
+    };
   });
 };
 
-const connectHamburgerSm = () => {
-  const hamburgerSmEl = document.querySelector('#open-menu-sm');
-  const navBarEl = document.querySelector('#main-menu');
-  hamburgerSmEl.addEventListener('click', event => {
-    event.preventDefault();
-    navBarEl.style.width ='240px';
-    connectCloseMenuSm();
+const connectCloseMenuSm = () => {
+  document.addEventListener('click', event => {
+    // event.preventDefault();
+    const navBarEl = document.querySelector('#main-menu');
+    const divEl = event.target.closest('div');
+    if (divEl && divEl.id === 'close-menu-sm'){
+      navBarEl.style.width ='0px';
+      navBarEl.style.zIndex = 10;
+    };
   });
 };
 
 
 
 displayPortfolio(portfolioData);
-connectHamburgerSm();
+connectOpenMenuSm();
+connectCloseMenuSm();
+
