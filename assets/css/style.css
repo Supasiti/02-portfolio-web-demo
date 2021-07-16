@@ -36,11 +36,9 @@
 }
 
 html {
-  font-size: 90%;
+  font-size: 75%;
   scroll-behavior: smooth;
 }
-
-/*  set everything to zero */
 body {
   margin: 0px;
   padding: 0px;
@@ -64,8 +62,9 @@ p, a {
 
 h1 {
   font-family: Josefin Sans,sans-serif ;
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 100;
+  line-height: 1.4;
   text-transform: uppercase;
   color: var(--ny-pink);
   padding: 0.2em 0em;
@@ -88,9 +87,15 @@ a {
 }
 
 /* ------------------------------------- */
-/* BORDER UTILS */
+/* UTILS */
 .border-round {
   border-radius: var(--border-radius);
+}
+.bg-pink {
+  background-color: var(--ny-pink) !important ;
+}
+.display-inline-block {
+  display: inline-block;
 }
 
 /* ------------------------------------- */
@@ -108,94 +113,98 @@ header.page-header {
   top: 0px;
   left: 0px;
   right: 0px;
+  height: 56px;
+  transition: left 0.5s ease-in-out;
 }
 
-p.nav-title {
-  /* gradient background */
-  background-image: linear-gradient(
-    to bottom,
-    var(--dark-grey),
-    var(--light-grey)
-  );
+p.page-title {
+  width: 100%;
+  font-size: 1.4rem ;
+  color: var(--teal);
   text-align: center;
   text-transform: uppercase;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-bottom: 0rem;
-  font-size: 1.8rem ;
-  color: var(--teal);
-  position: relative;
-  z-index: 1000;
 }
 
 /* ------------------------------------- */
 /* navigation bar */
 .nav-bar {
-  align-items: center;
-  margin-right: 3rem;
-  margin-bottom: 0em;
-  position: relative;
+  min-height: 100vh;
+  width: 0px;
+  background-color: var(--light-grey);
+  position: fixed;
+  z-index: 20;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  transition: width 0.5s ease-in-out;
 }
-
-.nav-bar ul {
-  height: 100%;
-  width: max-content;
-}
-
-.menu-item a {
-  padding: 0em;
-  margin: 0em 1em;
-  height: 100%;
-}
-
-.menu-item a p {
+.menu-icon {
   color: var(--light-green);
-  font-size: 1.4rem;
+  background-color: var(--light-grey);
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-icon-sm {
+  color: var(--light-green);
+  background-color: var(--light-grey);
+  width: 56px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  hamburger */
+#open-menu-lg{
+  position: absolute;
+  top: 0px;
+  z-index: 22;
+}
+#open-menu-sm {
+  position: absolute;
+  top: 0px;
+  z-index: 1010;
+}
+#close-menu {
+  position: absolute;
+  top: 0px;
+  z-index: 23;
+}
+.first-menu {
+  margin-top: 64px;
+}
+.menu-items {
+  width: 240px;
+}
+.menu-items > .bg-pink {
+  padding-left: 56px;
+}
+.menu-item {
+  width: 240px;
+}
+.menu-item p {
+  display: inline;
+  color: var(--light-green);
+  line-height: 1;
+  padding: 0px;
 }
 
 /* hover */
-.menu-item a:hover {
-  border-bottom: 2px solid var(--ny-pink);
-}
-
-.menu-item a:hover p {
+.menu-item:hover *, .menu-icon:hover, .menu-icon-sm:hover {
   color: var(--teal);
-}
+  cursor: pointer;
+} 
 
 /* anchor */
 .anchor {
   position: relative;
 }
-
 .anchor a.anchor-tag {
   position: absolute;
-  top: -3.4rem
-}
-
-/*  hamburger */
-#main-menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  line-height: 1em;
-  padding: .75em 15px;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  z-index: 1001;
-}
-
-/* close menu */
-#close-menu {
-  display: none;
-  width: 100%;
-  text-align: center;
-  font-size: 1.8rem;
-  line-height: 1em;
-  padding: .5em 0.5px;
-}
-
-#close-menu:hover {
-  color: var(--teal);
+  top: -56px;
 }
 
 /* ------------------------------------- */
@@ -203,7 +212,12 @@ p.nav-title {
 
 /* so it doesn't get hide behind the nav bar */
 main {
-  margin-top: 4.43rem; 
+  background-color: var(--darker-grey);
+  position: relative;
+  z-index: 10;
+  margin-top: 56px; 
+  margin-left: 0px;
+  transition: margin-left 0.5s ease-in-out;
 }
 
 /* dark background on every even section */
@@ -215,16 +229,10 @@ main {
 .main-section:nth-child(odd) {
   background-color: var(--darker-grey);
 }
-
 .container {
   max-width: 1200px;
   margin: 0px auto;  /* centering horizontally */
 }
-
-.side-container {
-  border-right: 1px solid var(--teal);
-}
-
 .content {
   width: 100%;
   padding: 0rem 1.5rem;
@@ -293,7 +301,6 @@ main {
 
 /* ------------------------------------- */
 /* portfolios section */
-
 
 .card {
   position: relative;
@@ -400,105 +407,62 @@ main {
 /* ------------------------------------- */
 /* Media queries */
 
-/* Pads */
-@media screen and (max-width: 992px) {
+
+/* Tablet */
+@media screen and (min-width: 768px) {
   html {
     font-size: 80%;
   }
-}
 
-/* Mobile */
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 75%;
+  /*  leaving room for menu icon */
+  header.page-header {
+    left: 56px;
+  }
+  main {
+    margin-left: 56px;
   }
 
-  p.nav-title {
-    width: 100%;
-  }
+  /* ----------------------- */
+  /*    menu   */
 
-  /* Navigation */
   .nav-bar {
-    width: 100%;
-    margin-right: 0em;
-    flex-direction: column;
-    
-    /* to hide beneath the page title */
-    position: absolute;
-    z-index: 999;
-    top: -16rem; 
-    left: 0rem;
-    background-color: var(--light-grey);
-    transition: top 0.5s ease-in-out; /* change top to slide it down */
+    min-width: 240px;
+    z-index: 1;
   }
-
-  #main-menu-toggle {
-    display: inline-block;
+  #open-menu-sm {
+    display: none;
+  } 
+  #open-menu-lg {
+    z-index: 24;
+  } 
+  .menu-icon-sm {
+    height: 48px;
   }
-
-  .nav-bar ul {
-    display: flex;
-    height: unset; /* Need to reset the height to fit the content */
-    width: 100%;
-    flex-direction: column; /* need to change flex direction to column */
-  }
-
-  .menu-item {
-    width: 100%; 
-    padding: 0.6em 0em;
-    position: relative;
-  }
-
-  .menu-item::after {
-    /* adding separator */
-    content: "";
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
-    width: 100%;
-    border-bottom: 2.8px solid var(--dark-grey);
-    z-index: 2;
-  }
-
-  .menu-item a {
-    margin: 0em;
-  }
-  
-  .menu-item a:hover {
-    border: none;
-  }
-
-  .menu-item a p {
-    text-align: center;
-  }
-
-  /* interaction with hamberger icon */
-  #main-menu:target {
-    top: 4.6rem; /* this will slide the menu down from under the page title */
-  }
-
-  #main-menu:target .close-menu{
-    display: inline-block;
-  }
-
 
   /*  ----------------------- */
   /*  Main body */
    h1 {
-    font-size: 4rem ;
+    font-size: 6rem;
   }
 
   .side-container {
-    border: none;
+    border-right: 1px solid var(--teal);
   }
 
   .side-container header {
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
 
   .left-title {
-    padding-right: 0rem;
-    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0rem;
   }
 }
 
+/* ----------------------- */
+/*   desktop   */
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 90%;
+  }
+}
