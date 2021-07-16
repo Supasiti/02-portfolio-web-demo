@@ -179,6 +179,9 @@ p.page-title {
 .menu-items {
   width: 240px;
 }
+.menu-items > .bg-pink {
+  padding-left: 56px;
+}
 .menu-item {
   width: 240px;
 }

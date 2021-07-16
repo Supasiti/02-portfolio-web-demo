@@ -101,6 +101,7 @@ const openMenuOnTablet = (openEl) => {
   openEl.style.zIndex = 22;
 };
 
+// close menu on tablet
 const closeMenuOnTablet = event => {
   if (window.innerWidth >= 768){ // tablet window
     if (isMouseClickedToClose(event)){
@@ -116,7 +117,6 @@ const closeMenuOnTablet = event => {
   };
 };
 
-
 // open menu on tablet view port
 const connectOpenMenuOnTablet = () => {
   document.addEventListener('click', event => {
@@ -128,10 +128,6 @@ const connectOpenMenuOnTablet = () => {
     };
   });
 };
-
-
-
-
 
 
 displayPortfolio(portfolioData);
