@@ -91,10 +91,51 @@ const closeMenuOnMobile = event => {
   };
 };
 
+// open menu on tablet
+const openMenuOnTablet = (openEl) => {
+  const headerEl = document.querySelector('header.page-header');
+  const mainEl = document.querySelector('main');
+
+  headerEl.style.left ='240px';
+  mainEl.style.marginLeft = '240px';
+  openEl.style.zIndex = 22;
+};
+
+const closeMenuOnTablet = event => {
+  if (window.innerWidth >= 768){ // tablet window
+    if (isMouseClickedToClose(event)){
+      const headerEl = document.querySelector('header.page-header');
+      const mainEl = document.querySelector('main');
+      const openEl = document.querySelector('#open-menu-lg');
+
+      headerEl.style.left ='56px';
+      mainEl.style.marginLeft = '56px';
+      openEl.style.zIndex = 24;
+      document.removeEventListener('click', closeMenuOnTablet) 
+    };
+  };
+};
+
+
+// open menu on tablet view port
+const connectOpenMenuOnTablet = () => {
+  document.addEventListener('click', event => {
+    
+    const divEl = event.target.closest('div');
+    if (divEl && divEl.id === 'open-menu-lg'){
+      openMenuOnTablet(divEl)
+      document.addEventListener('click', closeMenuOnTablet)
+    };
+  });
+};
+
+
+
 
 
 
 displayPortfolio(portfolioData);
 connectOpenMenuOnMobile();
+connectOpenMenuOnTablet();
 
 
