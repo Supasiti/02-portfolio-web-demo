@@ -240,7 +240,7 @@ main {
 
 /* Titles on left or right sides of the vertical line */
 .left-title {
-  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   margin-bottom: 1em;
   position: relative;
 }
@@ -454,7 +454,7 @@ main {
   }
 
   .left-title {
-    padding-right: 1rem;
+    padding-right: 1.5rem;
     padding-left: 0rem;
   }
 }
