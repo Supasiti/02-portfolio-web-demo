@@ -2,45 +2,22 @@
 // handle go to a new window
 const handleGotoLink = (event, link) => {
   event.preventDefault();
-  console.log(event.target);
+  event.stopPropagation();
   window.open(link);
 };
 
-
-//  card container
-const createCardContainer = () => {
+//-----------------------------------------
+//  card container 
+const createProjectCardContainer = ({link}) => {
   const result = document.createElement('div');
-  result.classList = 'card';
-  return result;
-};
-
-// card aricle
-const createCardArticle = (link) => {
-  const result = document.createElement('article');
+  result.classList = 'card flex-row';
   result.dataset.link = link;
   result.addEventListener('click', event => handleGotoLink(event, link));
   return result;
 };
 
-
-//  card title
-const createCardTitle = (title) => {
-  const result = document.createElement('header');
-  const titleEl = document.createElement('h3');
-  titleEl.classList = 'card-title underline';
-  titleEl.textContent = title;
-  result.appendChild(titleEl);
-  result.classList = 'card-title-container'
-  return result;
-};
-
-// card overlay
-const createCardDarkOverlay = () => {
-  const result = document.createElement('div');
-  result.classList = 'card-img-overlay';
-  return result;
-};
-
+//-----------------------------------------
+//  parsing image source from image path 
 const parseImgSource = (imgSource) => {
   const getWidth = source => {
     const strings = source.split('-');
@@ -52,8 +29,8 @@ const parseImgSource = (imgSource) => {
   return imgSrcSetStrings.join(', ');
 };
 
-// card image
-const createCardImgEl = (imgData) => {
+// project image 
+const createProjectImgEl = ({imgData}) => {
   const result = document.createElement('img');
   result.classList = 'card-img';
   result.srcset = parseImgSource(imgData.source);
@@ -62,48 +39,68 @@ const createCardImgEl = (imgData) => {
   return result;
 };
 
-// card tag
-const createCardTag = (tag) => {
+// project tag
+const createProjectTag = (tag) => {
   const result = document.createElement('li');
-  const pEl = document.createElement('p');
-  pEl.textContent = tag;
   result.classList = 'card-tag';
-  result.appendChild(pEl);
+  result.innerHTML = `<p>${tag}</p>`
   return result;
 };
 
-
-const createCardTagContainer = (tags) => {
-  const result = document.createElement('ul');
-  result.classList = 'card-tags flex-row justify-flex-start';
-  tags.map(tag => result.appendChild(createCardTag(tag)));
+// tag container
+const createTagContainer = ({tags}) => {
+  const result = document.createElement('div');
+  const ulEl = document.createElement('ul');
+  result.classList = 'card-tags';
+  ulEl.classList = 'flex-row justify-flex-start';
+  tags.map(tag => ulEl.appendChild(createProjectTag(tag)));
+  result.appendChild(ulEl);
   return result;
 }
 
-// card footer
-const createCardFooter = (tags) => {
+// image overlay 
+const createImageDarkOverlay = () => {
   const result = document.createElement('div');
-  const cardTagContainerEl = createCardTagContainer(tags);
-  result.appendChild(cardTagContainerEl);
+  result.classList = 'card-img-overlay';
+  return result;
+};
+
+// image container 
+const createImageContainer = projectData => {
+  const result = document.createElement('div');
+  result.classList = 'card-img-container col-12 col-xl-6';
+  result.appendChild(createProjectImgEl(projectData));
+  result.appendChild(createTagContainer(projectData));
+  result.appendChild(createImageDarkOverlay());
+  return result;
+};
+
+//-----------------------------------------
+// project article
+const createProjectArticle = (link) => {
+  const result = document.createElement('article');
+  result.classList = 'col-12 col-xl-6';
+  return result;
+};
+
+//  project title
+const createProjectTitle = ({title}) => {
+  const result = document.createElement('header');
+  result.classList = 'card-title-container'
+  result.innerHTML = `<h3 class="card-title underline">${title}</h3>`
   return result;
 };
 
 
-//  card body
-const createCardBody = (cardData) => {
-  const result = document.createElement('body');
-  const imgEl = createCardImgEl(cardData.imgData);
-  const footerEl = createCardFooter(cardData.tags);
-  const overlayEl = createCardDarkOverlay();
-
-  result.appendChild(imgEl);
-  result.appendChild(footerEl);
-  result.appendChild(overlayEl);
+// project description
+const createProjectDescription = ({description}) => {
+  const result = document.createElement('div');
+  result.innerHTML = `<p>${description}</p>`;
   return result;
 };
 
-// card code
-const createCardCode = (codeLink) => {
+// project code
+const createProjectCode = ({codeLink}) => {
   const result = document.createElement('div');
   const textEl = document.createElement('p');
   textEl.innerHTML = '<span class="fab fa-github"></span> Code';
@@ -114,19 +111,21 @@ const createCardCode = (codeLink) => {
   return result;
 };
 
+// project article container
+const createProjectArticleContainer = projectData => {
+  const result = createProjectArticle();
+  result.appendChild(createProjectTitle(projectData));
+  result.appendChild(createProjectDescription(projectData));
+  result.appendChild(createProjectCode(projectData));
+  return result;
+};
+
+//-----------------------------------------
 // create final card
-const createCard = (projectData) => {
-  const result = createCardContainer();
-  const articleEl = createCardArticle(projectData.link)
-  const titleEl = createCardTitle(projectData.title);
-  const bodyEl  = createCardBody(projectData);
-  const codeEl  = createCardCode(projectData.codeLink);
-
-  articleEl.appendChild(titleEl);
-  articleEl.appendChild(bodyEl);
-
-  result.appendChild(articleEl);
-  result.appendChild(codeEl);
+const createProjectCard = (projectData) => {
+  const result = createProjectCardContainer(projectData);
+  result.appendChild(createImageContainer(projectData));
+  result.appendChild(createProjectArticleContainer(projectData));
 
   return result;
 };

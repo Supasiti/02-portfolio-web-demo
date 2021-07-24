@@ -310,37 +310,13 @@ main {
   margin-bottom: 1rem;
   overflow: hidden;
   transition: all 0.5s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
 }
 
 /* To stop blurring effect from spilling into the main area */
-.card > article {
+.card > .card-img-container {
+  position: relative;
   overflow: hidden;
 }
-
-/* card title */
-.card .card-title-container {
-  padding: 0.6em 0.6em 0.6em 0em;
-  border-radius: var(--border-radius);
-
-  /* need dark background to improve contrast */
-  background-color: rgba(var(--darker-grey-rgb), 0.75);
-  box-shadow: 
-    0px 0px 4px 1px rgba(var(--darker-grey-rgb), 0.75), 
-    0px 0px 8px 4px rgba(var(--darker-grey-rgb), 0.5);
-  position: absolute;
-  top: 10%;
-  left: -6px;
-  z-index: 10;
-}
-.card .card-title {
-  text-shadow: 0px 0px 4px var(--darker-grey);
-  padding-left: 2rem;
-}
-
 /* image */
 .card .card-img {
   width: 100%;
@@ -349,37 +325,62 @@ main {
   /* add darken overlay when hovered over */
   display: none;
   width: 100%;
-  height: 100%;
   position: absolute;
-  top: 0%;
+  top: 0rem;
+  bottom: 0rem;
   background-color: rgba(var(--darker-grey-rgb), 0.4);
   z-index: 4;
   cursor: pointer;
 }
-
 /* tags */
 .card .card-tags {
-  margin-top: 0.5rem;
-  margin-bottom: -0.5rem;
+  position: absolute;
+  bottom: 0rem;
+  right:0rem;
+  z-index: 10;
+  background-color: rgba(var(--darker-grey-rgb), 0.75);
+  box-shadow: 
+    0px 0px 4px 1px rgba(var(--darker-grey-rgb), 0.75), 
+    0px 0px 8px 4px rgba(var(--darker-grey-rgb), 0.5);
 }
 .card .card-tag {
-  margin-right: 1rem;
+  margin: 0rem 0.5rem;
   text-shadow: 0px 0px 10px var(--teal);
 }
-.card .card-code {
+.card .card-tag p {
+  font-size: 0.9rem;
+}
+
+/* card article */
+.card > article {
+
+  width: fit-content;
+  padding: 1rem;
+}
+.card .card-title-container {
+  width: fit-content;
   position: relative;
-  z-index: 100;
+  left: -2rem;
+}
+.card .card-title {
+  text-shadow: 0px 0px 4px var(--darker-grey);
+  padding-left: 2rem;
+}
+.card .card-code {
+  width: fit-content;
   margin-top: 1rem;
   padding: 0px 1rem;
   border: 1px solid var(--teal);
   border-radius: var(--border-radius);
 }
 
+
 /* effect on hover */
 .card:hover {
   border: 1px solid var(--teal);
   box-shadow: 0px 0px 4px 4px var(--light-grey);
   transform: translate(-1px,-1px);
+  cursor: pointer;
 }
 .card:hover .card-img{
   filter: blur(4px);
@@ -387,9 +388,6 @@ main {
 }
 .card:hover .card-img-overlay{
   display: block;
-}
-.card .card-code:hover {
-  cursor: pointer;
 }
 
 
@@ -464,5 +462,16 @@ main {
 @media screen and (min-width: 992px) {
   html {
     font-size: 90%;
+  }
+}
+
+/* ----------------------- */
+/*   Extra wide   */
+@media screen and (min-width: 1200px) {
+  .card > .card-img-container {
+    order: 2;
+  }
+  .card > article {
+    order: 1;
   }
 }
