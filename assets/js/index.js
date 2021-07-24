@@ -75,7 +75,7 @@ const connectOpenMenuOnTablet = () => {
   });
 };
 
-
+displayAllBadges();
 displayAllProjects();
 connectOpenMenuOnMobile();
 connectOpenMenuOnTablet();
