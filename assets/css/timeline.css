@@ -1,0 +1,77 @@
+
+/* center line */
+.timeline-center {
+  flex: 0 0 4rem;
+  display: none;
+}
+.timeline-center .vertical-line{
+  flex: 1 0 1rem;
+  border-right: 1px solid var(--teal);
+  margin: 0 auto;
+}
+.timeline-center .circle {
+  width: 2rem;
+  flex: 0 0 2rem;
+  margin: 0.5rem auto;
+  border: 1px solid var(--teal);
+  border-radius: 1rem;
+}
+
+/* ------------------------------------- */
+/* Job card */
+.job-card {
+  margin: 1.5rem auto;
+  background-color: var(--dark-grey);
+}
+.job-card > header {
+  width: calc(100% + 2rem);
+  margin-bottom: 1rem;
+}
+.job-title{
+ padding-bottom: 0rem;
+}
+.job-duration {
+  text-align: right;
+  padding: 0rem;
+  padding-left: 2rem;
+  margin-top: auto;
+}
+.job-location {
+  font-style: italic;
+  padding-top: 0rem;
+  margin-top: -0.5rem;
+}
+ul.job-description {
+  font-size: 1.2rem;
+  color: var(--ny-pink);
+  list-style: circle;
+}
+.job-description li {
+  margin-left: 3rem;
+}
+.timeline-section {
+  flex: 0 0 100%;
+}
+
+/* ----------------------------------------- */
+/*  media queries */
+@media screen and (min-width: 640px) {
+
+  .job-card {
+    width: calc(100% - 6rem);
+    max-width: 48rem;
+  }
+  .timeline-center {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+/* Desktop */
+@media screen and (min-width: 992px) {
+  .timeline-section {
+    flex: 1 0 100%;
+    margin-left: -3rem;
+  }
+}

@@ -12,10 +12,17 @@
   <!--  styles -->
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/badge.css">
+  <link rel="stylesheet" href="./assets/css/card.css">
+  <link rel="stylesheet" href="./assets/css/timeline.css">
   <link rel="stylesheet" href="./assets/css/layout-style.css">
   <link rel="stylesheet" href="./assets/css/spacing-style.css">
 
+  <script src="./assets/js/utils.js"></script>
   <script src="./assets/js/elements/card.js"></script>
+  <script src="./assets/js/elements/badge.js"></script>
+  <script src="./assets/js/elements/skill-tag.js"></script>
+  <script src="./assets/js/elements/timeline.js"></script>
   <script src="./assets/js/portfolio.js"></script>
 </head>
 
@@ -48,6 +55,12 @@
           <p>Projects</p>
         </a>
       </li>
+      <li class="menu-item">
+        <a class="flex-row align-center py-0" href="#my-experience">
+          <div class="menu-icon-sm"><i class="fas fa-pencil-alt fa-2x"></i></div>
+          <p>Experience</p>
+        </a>
+      </li>
     </ul>
 
     <!-- Contact me -->
@@ -55,6 +68,7 @@
       <li class="bg-pink py-2">
         <div class="flex-row align-center">
           <p>Contact me</p>
+        </div>
       </li>
       <li class="menu-item">
         <a 
@@ -118,7 +132,7 @@
     <!-- About me -->
     <section class="main-section anchor">
       <a class="anchor-tag" name="about-me"></a>
-      <div class="container py-5 flex-row">
+      <div class="container flex-row">
         
         <!-- side column -->
         <aside class="col-12 col-md-4 col-xl-3 side-container">
@@ -183,26 +197,62 @@
       </div>
     </section>
 
+    <!-- Skills -->
+    <section class="main-section anchor">
+      <a class="anchor-tag" name="skills"></a>
+      <div class="container">
+        <div class="col-12 flex-row justify-center">
+          <header class="col-fit my-auto">
+            <h2 class="underline my-auto">Skills</h2>
+          </header>
+        </div>
+        
+        <div id="badge-container" class="flex-row justify-space-around mt-4">
+          <!--  add badges here -->
+        </div>
+        <ul id="skill-tag-container" class="flex-row justify-center mt-4">
+          <!-- put all other skill tags here -->
+        </ul>
+      </div>
+    </section>
+
     <!-- Projects -->
     <section class="main-section anchor">
       <a class="anchor-tag" name="my-projects"></a>
-      <div class="container py-5 flex-row">
+      <div class="container flex-row">
 
-        <!-- Side flex-column -->
-        <aside class="col-12 col-md-4 col-xl-3 side-container">
+        <!-- Side column -->
+        <aside id="aside-projects" class="col-12 col-lg-4 col-xl-3">
           <header class="flex-row justify-flex-start">
             <h2 class="left-title underline">Projects</h2>
           </header>
         </aside>
 
-        <!-- main projects -->
-        <div class="col-12 col-md-8 col-xl-9 px-4">
-          <div id="first-project-container" >
-            <!-- pull the first project here -->
+        <!-- main column -->
+        <div class="col-12 col-lg-8 col-xl-9 px-4">
+          <div id="project-container">
+            <!-- put all projects here -->
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div id="other-project-container">
-            <!-- pull the other projects here -->
+    <!-- Experience -->
+    <section class="main-section anchor">
+      <a class="anchor-tag" name="my-experience"></a>
+      <div class="container flex-row">
+
+        <!-- side column -->
+        <aside id="aside-job" class="col-12 col-lg-4 col-xl-3">
+          <header class="flex-row justify-flex-start">
+            <h2 class="left-title underline">Experience</h2>
+          </header>
+        </aside>
+
+        <!-- main column -->
+        <div class="col-12 col-lg-8 col-xl-9 px-4">
+          <div id="job-container">
+            <!-- put all jobs here -->
           </div>
         </div>
       </div>
@@ -213,8 +263,6 @@
       <p>&#169 2021 Tharatorn Supasiti</p>
     </footer>
   </main>
-
-  
 
   <script src="./assets/js/index.js"></script>
 </body>

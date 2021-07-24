@@ -1,0 +1,116 @@
+/* ------------------------------------- */
+/* portfolios section */
+
+.card {
+  position: relative;
+  border: 1px solid var(--light-grey);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+/* ------------------------------------- */
+/*  image container  */
+
+/* To stop blurring effect from spilling into the main area */
+.card > .card-img-container {
+  position: relative;
+  overflow: hidden;
+}
+.card .card-img {
+  width: 100%;
+}
+.card .card-img-overlay {
+  /* add darken overlay when hovered over */
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 0rem;
+  bottom: 0rem;
+  background-color: rgba(var(--darker-grey-rgb), 0.4);
+  z-index: 4;
+  cursor: pointer;
+}
+/* tags */
+.card .card-tags {
+  position: absolute;
+  bottom: 0rem;
+  right:0rem;
+  z-index: 10;
+  background-color: rgba(var(--darker-grey-rgb), 0.75);
+  box-shadow: 
+    0px 0px 4px 1px rgba(var(--darker-grey-rgb), 0.75), 
+    0px 0px 8px 4px rgba(var(--darker-grey-rgb), 0.5);
+}
+.card .card-tag {
+  margin: 0rem 0.5rem;
+  text-shadow: 0px 0px 10px var(--teal);
+}
+.card .card-tag p {
+  font-size: 0.9rem;
+}
+
+/* ------------------------------------- */
+/* card article */
+.card > article {
+  width: fit-content;
+  padding: 1rem;
+}
+.card .card-title-container {
+  position: relative;
+  left: -2rem;
+}
+.card .card-title {
+  text-shadow: 0px 0px 4px var(--darker-grey);
+  padding-left: 2rem;
+}
+.card-code {
+  width: fit-content;
+  margin-top: 1rem;
+  padding: 0px 1rem;
+  border: 1px solid var(--teal);
+  border-radius: var(--border-radius);
+}
+
+
+/* effect on hover */
+.card:hover {
+  border: 1px solid var(--teal);
+  box-shadow: 0px 0px 4px 4px var(--light-grey);
+  transform: translate(-1px,-1px);
+  cursor: pointer;
+}
+.card:hover .card-img{
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+}
+.card:hover .card-img-overlay{
+  display: block;
+}
+
+/* ------------------------------------- */
+/*  project specific */
+
+.project-card {
+  background-color: var(--darker-grey);
+}
+.project-card .card-title-container {
+  width: fit-content;
+}
+
+/* ------------------------------------- */
+/*  media queries */
+
+/* Tablet */
+@media screen and (min-width: 640px) {
+
+  .project-card > .card-img-container {
+    order: 2;
+  }
+  .project-card > article {
+    order: 1;
+  }
+}
+

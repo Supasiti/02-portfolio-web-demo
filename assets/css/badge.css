@@ -1,0 +1,45 @@
+/* ------------------------------------- */
+/* portfolios section */
+
+.badge {
+  text-align: center;
+  background-color: var(--light-grey);
+  border-radius: var(--border-radius);
+  box-shadow: 
+    0px 0px 4px 1px rgba(var(--light-grey-rgb), 0.75), 
+    0px 0px 8px 4px rgba(var(--light-grey-rgb), 0.5);
+  padding: 1rem;
+  margin: 1rem auto;
+  overflow: hidden;
+  flex: 0 1 24rem;
+  transition: all 0.5s ease;
+}
+
+.badge .badge-icon {
+  width: fit-content;
+  margin: 0rem auto;
+  font-size: 2.4rem;
+  color: var(--teal);
+}
+.badge .badge-icon .badge-square{
+  position: relative;
+  margin: 6.18px 0px;
+  width: 6.2rem;
+  height: 6.2rem;
+  background-color: var(--teal);
+  border-radius: 8px;
+  align-items: center;
+}
+
+.badge .badge-icon p{
+  line-height: 1;
+  padding: 0rem;
+  width: fit-content;
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--light-grey);
+}
+.badge .badge-title {
+  font-size: 1.4rem;
+}
+
