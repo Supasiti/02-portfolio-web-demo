@@ -10,7 +10,7 @@ const handleGotoLink = (event, link) => {
 //  card container 
 const createProjectCardContainer = ({link}) => {
   const result = document.createElement('div');
-  result.classList = 'card flex-row';
+  result.classList = 'card project-card flex-row';
   result.dataset.link = link;
   result.addEventListener('click', event => handleGotoLink(event, link));
   return result;

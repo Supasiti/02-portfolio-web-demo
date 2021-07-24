@@ -55,12 +55,10 @@
 /* ------------------------------------- */
 /* card article */
 .card > article {
-
   width: fit-content;
   padding: 1rem;
 }
 .card .card-title-container {
-  width: fit-content;
   position: relative;
   left: -2rem;
 }
@@ -93,16 +91,26 @@
 }
 
 /* ------------------------------------- */
+/*  project specific */
+
+.project-card {
+  background-color: var(--darker-grey);
+}
+.project-card .card-title-container {
+  width: fit-content;
+}
+
+/* ------------------------------------- */
 /*  media queries */
 
 
 /* Tablet */
 @media screen and (min-width: 768px) {
 
-  .card > .card-img-container {
+  .project-card > .card-img-container {
     order: 2;
   }
-  .card > article {
+  .project-card > article {
     order: 1;
   }
 }

@@ -1,0 +1,79 @@
+#job-container {
+
+}
+
+/*  left side */
+.timeline-left {
+  flex: 0 0 calc(33.33% - 2rem);
+  justify-content: center;
+}
+
+.timeline-left .year {
+  flex: 0 0  0rem;
+  margin: auto 0rem;
+  text-align: right;
+}
+
+
+/* center  */
+.timeline-center {
+  flex: 0 0 4rem;;
+}
+
+.timeline-center .vertical-line{
+  flex: 1 0 1rem;
+  border-right: 1px solid var(--teal);
+  margin: 0 auto;
+}
+
+.timeline-center .circle {
+  width: 2rem;
+  flex: 0 0 2rem;
+  margin: 0.5rem auto;
+  border: 1px solid var(--teal);
+  border-radius: 1rem;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* right side */
+.job-card {
+  background-color: var(--dark-grey);
+}
+.job-card > header {
+  width: calc(100% + 2rem);
+  margin-bottom: 1rem;
+}
+.job-title{
+ padding: 0rem;
+}
+.job-duration {
+  text-align: right;
+  padding: 0rem;
+  margin-top: auto;
+}
+.job-location {
+  font-style: italic;
+  padding-top: 0rem;
+  margin-top: -0.5rem;
+}
+ul.job-description {
+  font-size: 1.2rem;
+  color: var(--ny-pink);
+  list-style: circle;
+}
+.job-description li {
+
+  margin-left: 3rem;
+}
+
+
+/* ----------------------------------------- */
+/*  media queries */
+
