@@ -76,6 +76,7 @@ const connectOpenMenuOnTablet = () => {
 };
 
 displayAllBadges();
+displaySkillTags();
 displayAllProjects();
 connectOpenMenuOnMobile();
 connectOpenMenuOnTablet();
