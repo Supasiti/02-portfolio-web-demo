@@ -68,7 +68,7 @@ const createImageDarkOverlay = () => {
 // image container 
 const createImageContainer = projectData => {
   const result = document.createElement('div');
-  result.classList = 'card-img-container col-12 col-xl-6';
+  result.classList = 'card-img-container col-12 col-md-6';
   result.appendChild(createProjectImgEl(projectData));
   result.appendChild(createTagContainer(projectData));
   result.appendChild(createImageDarkOverlay());
@@ -79,7 +79,7 @@ const createImageContainer = projectData => {
 // project article
 const createProjectArticle = (link) => {
   const result = document.createElement('article');
-  result.classList = 'col-12 col-xl-6';
+  result.classList = 'col-12 col-md-6';
   return result;
 };
 
