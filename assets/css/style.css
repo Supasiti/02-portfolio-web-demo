@@ -379,6 +379,14 @@ main {
     padding-right: 1.5rem;
     padding-left: 0rem;
   }
+
+  #aside-job header {
+    justify-content: flex-end;
+  }
+  #aside-job .left-title {
+    padding-right: 1.5rem;
+    padding-left: 0rem;
+  }
 }
 
 /* ----------------------- */

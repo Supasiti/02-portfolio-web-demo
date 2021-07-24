@@ -22,6 +22,7 @@
   <script src="./assets/js/elements/card.js"></script>
   <script src="./assets/js/elements/badge.js"></script>
   <script src="./assets/js/elements/skill-tag.js"></script>
+  <script src="./assets/js/elements/timeline.js"></script>
   <script src="./assets/js/portfolio.js"></script>
 </head>
 
@@ -52,6 +53,12 @@
         <a class="flex-row align-center py-0" href="#my-projects">
           <div class="menu-icon-sm"><i class="fas fa-briefcase fa-2x"></i></div>
           <p>Projects</p>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a class="flex-row align-center py-0" href="#my-experience">
+          <div class="menu-icon-sm"><i class="fas fa-pencil-alt fa-2x"></i></div>
+          <p>Experience</p>
         </a>
       </li>
     </ul>
@@ -209,20 +216,19 @@
       </div>
     </section>
 
-
     <!-- Projects -->
     <section class="main-section anchor">
       <a class="anchor-tag" name="my-projects"></a>
       <div class="container flex-row">
 
-        <!-- Side flex-column -->
+        <!-- Side column -->
         <aside id="aside-projects" class="col-12 col-lg-4 col-xl-3">
           <header class="flex-row justify-flex-start">
             <h2 class="left-title underline">Projects</h2>
           </header>
         </aside>
 
-        <!-- main projects -->
+        <!-- main column -->
         <div class="col-12 col-lg-8 col-xl-9 px-4">
           <div id="project-container">
             <!-- put all projects here -->
@@ -232,8 +238,9 @@
     </section>
 
     <!-- Experience -->
-    <section class="main-section">
-      <div class="container padding-top-bottom">
+    <section class="main-section anchor">
+      <a class="anchor-tag" name="my-experience"></a>
+      <div class="container flex-row">
 
         <!-- side column -->
         <aside id="aside-job" class="col-12 col-lg-4 col-xl-3">
@@ -246,46 +253,8 @@
         <div class="col-12 col-lg-8 col-xl-9 px-4">
           <div id="job-container">
             <!-- put all jobs here -->
-
-            <ul class="flex-row">
-              <li class="col-12 flex-row">
-                <!-- center line -->
-                <div class="timeline-center flex-column">
-                  <span class="vertical-line visible"> </span>
-                  <span class="circle"></span>
-                  <span class="vertical-line visible"></span>
-                </div>
-
-                <!-- job card -->
-                <article class="card job-card">
-                  <header class="card-title-container underline flex-row justify-space-between">
-                    <h3 class="card-title job-title">Code Quiz</h3>
-                    <p class="job-duration"> Jul 2020 - present</p>
-                  </header>
-                  <p class="job-location">Crux Bouldering, Melbourne, VIC, Australia</p>
-
-                  <ul class="job-description">
-                    <li>
-                      <p>Responsible for supervising and managing a team of route setters to design
-                      high-quality indoor climbing routes in a bouldering gym in Coburg North.</p> 
-                    </li>
-                    <li>
-                      <p>Further responsibilities include training new route setters, ensuring
-                        compliance with industry safety standards, and designing and implementing solutions to improve business operations.</p>
-                    </li>
-                  </ul>
-                </article>
-              </li>
-            </ul>
-
-
-
           </div>
         </div>
-
-
-      
-      
       </div>
     </section>
 
