@@ -7,7 +7,7 @@ const badgeData = [
   {
     icon : `<i class="fab fa-js-square fa-3x"></i>`,
     title : 'JavaScript',
-    text : 'HTML5, CSS, Node.js, Jest'
+    text : 'HTML5, CSS, Node.js, Jest, Express, Sequelize(MySQL)'
   },
   {
     icon : `<div class="badge-square flex-row align-center justify-center"><p>C#</p></div>`,
