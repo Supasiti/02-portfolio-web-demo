@@ -1,5 +1,43 @@
 const portfolioData = [
   {
+    title : "BeeStrong",
+    imgData : {
+      source : [
+        './assets/images/bee-strong-400w.png',
+        './assets/images/bee-strong-800w.png'
+      ],
+      alt : "screenshot of Bee Strong"
+    },
+    tags : [
+      'JavaScript',
+      'NodeJS',
+      'ExpressJS',
+      'MySQL'
+    ],
+    link : "https://bee-strong.herokuapp.com",
+    codeLink : "https://github.com/raven-bootcamp/bee-strong",
+    description : 'BeeStrong is an open platform for sharing the right fitness content with the right students.'
+  },
+  {
+    title : "Tech Blog",
+    imgData : {
+      source : [
+        './assets/images/tech-blog-400w.png',
+        './assets/images/tech-blog-800w.png'
+      ],
+      alt : "screenshot of Tech blog"
+    },
+    tags : [
+      'JavaScript',
+      'NodeJS',
+      'ExpressJS',
+      'MySQL'
+    ],
+    link : "https://supa-tech-blog.herokuapp.com/",
+    codeLink : "https://github.com/Supasiti/tech-blog",
+    description : "A web application that allows user to publish and add comments to blog posts."
+  },
+  {
     title : "Cryptfolio",
     imgData : {
       source : [
@@ -35,24 +73,6 @@ const portfolioData = [
     link : "https://supasiti.github.io/06-weather-dashboard/",
     codeLink : "https://github.com/Supasiti/06-weather-dashboard",
     description : 'A weather dashboard that allows users to get current and the next 5-day weather data for a city they are interested in.'
-  },
-  {
-    title : "Code Quiz",
-    imgData : {
-      source : [
-        './assets/images/code-quiz-400w.gif',
-        './assets/images/code-quiz-800w.gif',
-      ],
-      alt : "screenshot of Code Quiz"
-    },
-    tags : [
-      'HTML5',
-      'CSS',
-      'JavaScript',
-    ],
-    link : "https://supasiti.github.io/04-code-quiz/",
-    codeLink : "https://github.com/Supasiti/04-code-quiz",
-    description : 'A lightweight quiz app that tests your knowledge on JavaScript.'
   }
 ];
 
